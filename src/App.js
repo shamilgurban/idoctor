@@ -4,9 +4,7 @@ import './App.css';
 function App() {
   return (
     <div class="boxed_wrapper">
-
         <div class="preloader"></div>
-
         <header class="main-header style-one">
             <div class="header-top">
                 <div class="auto-container">

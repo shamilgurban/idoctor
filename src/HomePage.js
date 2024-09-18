@@ -1,4 +1,5 @@
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -53,7 +54,7 @@ function App() {
                                     <ul class="navigation clearfix">
                                         <li><a href="index.html">Ana Səhifə</a>
                                         </li> 
-                                        <li><a href="index.html">Həkimlər</a>
+                                        <li><a href="/DoctorList">Həkimlər</a>
                                         </li>
                                         <li><a href="index.html">Qiymətlər</a>
                                             <div class="megamenu">
@@ -77,7 +78,7 @@ function App() {
                                 </div>
                             </nav>
                         </div>
-                        <div class="btn-box"><a href="register-page.html" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
+                        <div class="btn-box"><a href="Register" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
                     </div>
                 </div>
             </div>
@@ -92,7 +93,7 @@ function App() {
                             <nav class="main-menu clearfix">
                             </nav>
                         </div>
-                        <div class="btn-box"><a href="register-page.html" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
+                        <div class="btn-box"><a href="Register" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
                     </div>
                 </div>
             </div>

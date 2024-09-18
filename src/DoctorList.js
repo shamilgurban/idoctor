@@ -1,6 +1,18 @@
 import './App.css';
+import Select from 'react-select';
+import React, { useState } from 'react';
+
 
 function App() {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const options = [
+    { value: 1, label: 'Kardiologiya' },
+    { value: 2, label: 'Ginekologiya' },
+    { value: 3, label: 'Nevrologiya' },
+  ];
+
+
       return (
   
         <div className="boxed_wrapper">
@@ -106,66 +118,10 @@ function App() {
               </div>
             </div>
           </section>
-          <div className="select-field bg-color-3">
-            <div className="auto-container">
-              <div className="content-box">
-                <div className="form-inner clearfix">
-                  <form action="index.html" method="post">
-                    <div className="form-group clearfix">
-                      <select className="wide">
-                        <option data-display="Yer seçin">Yer seçin</option>
-                        <option value={1}>Azərbaycan</option>
-                        <option value={2}>Türkiyə</option>
-                        <option value={3}>Rusiya</option>
-                        <option value={4}>Qazaxıstan</option>
-                      </select>
-                      <input type="text" name="name" placeholder="Məs. Adı, İxtisas..." required />
-                      <button type="submit"><i className="icon-Arrow-Right" /></button>
-                    </div>
-                  </form>
-                  <ul className="select-box clearfix">
-                    <li>
-                      <div className="single-checkbox">
-                        <input type="radio" name="check-box" id="check2" defaultChecked />
-                        <label htmlFor="check2"><span />Həkim</label>    
-                      </div>
-                    </li>
-                    <li>
-                      <div className="single-checkbox">
-                        <input type="radio" name="check-box" id="check3" />
-                        <label htmlFor="check3"><span />Klinika</label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
           <section className="clinic-section doctors-page-section">
             <div className="auto-container">
               <div className="row clearfix">
-                <div className="col-lg-8 col-md-12 col-sm-12 content-side">
-                  <div className="item-shorting clearfix">
-                    <div className="left-column pull-left">
-                      <h3>20 nəticədən 1-6 arası göstərilir</h3>
-                    </div>
-                    <div className="right-column pull-right clearfix">
-                      <div className="short-box clearfix">
-                        <div className="select-box">
-                          <select className="wide">
-                            <option data-display="Sırala">Sırala</option>
-                            <option value={1}>Kardiologiya</option>
-                            <option value={2}>Nevrologiya</option>
-                            <option value={4}>Mamalıq və Ginekologiya</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className="menu-box">
-                        <button className="list-view"><i className="icon-List" /></button>
-                        <button className="grid-view on"><i className="icon-Grid" /></button>
-                      </div>
-                    </div>
-                  </div>
+                <div className="col-lg-12 col-md-12 col-sm-12 content-side">
                   <div className="wrapper grid">
                     <div className="clinic-list-content">
                       <div className="clinic-block-one">
@@ -251,7 +207,7 @@ function App() {
                         
                       
                         
-                        <div className="col-lg-6 col-md-6 col-sm-12 team-block">
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
                           <div className="team-block-three">
                             <div className="inner-box">
                               <figure className="image-box">
@@ -286,7 +242,7 @@ function App() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 team-block">
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
                           <div className="team-block-three">
                             <div className="inner-box">
                               <figure className="image-box">
@@ -321,7 +277,42 @@ function App() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 team-block">
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
+                          <div className="team-block-three">
+                            <div className="inner-box">
+                              <figure className="image-box">
+                                <img src="assets/images/team/team-9.jpg" alt="" />
+                                <a href="doctors-details.html"><i className="far fa-heart" /></a>
+                              </figure>
+                              <div className="lower-content">
+                                <ul className="name-box clearfix">
+                                  <li className="name"><h3><a href="doctors-details.html">Dr. Nurlan İbrahimov</a></h3></li>
+                                  <li><i className="icon-Trust-1" /></li>
+                                  <li><i className="icon-Trust-2" /></li>
+                                </ul>
+                                <span className="designation">Kardiologiya</span>
+                                <div className="rating-box clearfix">
+                                  <ul className="rating clearfix">
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><a href="doctors-details.html">(30)</a></li>
+                                  </ul>
+                                </div>
+                                <div className="location-box">
+                                  <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
+                                </div>
+                                <div className="lower-box clearfix">
+                                  <span className="text">Online</span>
+                                  <a href="doctors-details.html">Detallara Bax</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
                           <div className="team-block-three">
                             <div className="inner-box">
                               <figure className="image-box">
@@ -356,7 +347,7 @@ function App() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 team-block">
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
                           <div className="team-block-three">
                             <div className="inner-box">
                               <figure className="image-box">
@@ -391,23 +382,147 @@ function App() {
                             </div>
                           </div>
                         </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
+                          <div className="team-block-three">
+                            <div className="inner-box">
+                              <figure className="image-box">
+                                <img src="assets/images/team/team-11.jpg" alt="" />
+                                <a href="doctors-details.html"><i className="far fa-heart" /></a>
+                              </figure>
+                              <div className="lower-content">
+                                <ul className="name-box clearfix">
+                                  <li className="name"><h3><a href="doctors-details.html">Dr. Nurlan İbrahimov</a></h3></li>
+                                  <li><i className="icon-Trust-1" /></li>
+                                  <li><i className="icon-Trust-2" /></li>
+                                </ul>
+                                <span className="designation">Kardiologiya</span>
+                                <div className="rating-box clearfix">
+                                  <ul className="rating clearfix">
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><a href="doctors-details.html">(05)</a></li>
+                                  </ul>
+                                </div>
+                                <div className="location-box">
+                                  <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
+                                </div>
+                                <div className="lower-box clearfix">
+                                  <span className="text not-available">Uyğun deyil</span>
+                                  <a href="doctors-details.html">Detallara Bax</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
+                          <div className="team-block-three">
+                            <div className="inner-box">
+                              <figure className="image-box">
+                                <img src="assets/images/team/team-9.jpg" alt="" />
+                                <a href="doctors-details.html"><i className="far fa-heart" /></a>
+                              </figure>
+                              <div className="lower-content">
+                                <ul className="name-box clearfix">
+                                  <li className="name"><h3><a href="doctors-details.html">Dr. Nurlan İbrahimov</a></h3></li>
+                                  <li><i className="icon-Trust-1" /></li>
+                                  <li><i className="icon-Trust-2" /></li>
+                                </ul>
+                                <span className="designation">Kardiologiya</span>
+                                <div className="rating-box clearfix">
+                                  <ul className="rating clearfix">
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><a href="doctors-details.html">(30)</a></li>
+                                  </ul>
+                                </div>
+                                <div className="location-box">
+                                  <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
+                                </div>
+                                <div className="lower-box clearfix">
+                                  <span className="text">Online</span>
+                                  <a href="doctors-details.html">Detallara Bax</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
+                          <div className="team-block-three">
+                            <div className="inner-box">
+                              <figure className="image-box">
+                                <img src="assets/images/team/team-9.jpg" alt="" />
+                                <a href="doctors-details.html"><i className="far fa-heart" /></a>
+                              </figure>
+                              <div className="lower-content">
+                                <ul className="name-box clearfix">
+                                  <li className="name"><h3><a href="doctors-details.html">Dr. Nurlan İbrahimov</a></h3></li>
+                                  <li><i className="icon-Trust-1" /></li>
+                                  <li><i className="icon-Trust-2" /></li>
+                                </ul>
+                                <span className="designation">Kardiologiya</span>
+                                <div className="rating-box clearfix">
+                                  <ul className="rating clearfix">
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><a href="doctors-details.html">(30)</a></li>
+                                  </ul>
+                                </div>
+                                <div className="location-box">
+                                  <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
+                                </div>
+                                <div className="lower-box clearfix">
+                                  <span className="text">Online</span>
+                                  <a href="doctors-details.html">Detallara Bax</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 team-block">
+                          <div className="team-block-three">
+                            <div className="inner-box">
+                              <figure className="image-box">
+                                <img src="assets/images/team/team-9.jpg" alt="" />
+                                <a href="doctors-details.html"><i className="far fa-heart" /></a>
+                              </figure>
+                              <div className="lower-content">
+                                <ul className="name-box clearfix">
+                                  <li className="name"><h3><a href="doctors-details.html">Dr. Nurlan İbrahimov</a></h3></li>
+                                  <li><i className="icon-Trust-1" /></li>
+                                  <li><i className="icon-Trust-2" /></li>
+                                </ul>
+                                <span className="designation">Kardiologiya</span>
+                                <div className="rating-box clearfix">
+                                  <ul className="rating clearfix">
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><i className="icon-Star" /></li>
+                                    <li><a href="doctors-details.html">(30)</a></li>
+                                  </ul>
+                                </div>
+                                <div className="location-box">
+                                  <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
+                                </div>
+                                <div className="lower-box clearfix">
+                                  <span className="text">Online</span>
+                                  <a href="doctors-details.html">Detallara Bax</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="pagination-wrapper">
-                    <ul className="pagination">
-                      <li><a href="clinic-1.html" className="current">1</a></li>
-                      <li><a href="clinic-1.html">2</a></li>
-                      <li><a href="clinic-1.html">3</a></li>
-                      <li><a href="clinic-1.html"><i className="icon-Arrow-Right" /></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-12 col-sm-12 sidebar-side">
-                  <div className="map-inner ml-10">
-                    <div className="google-map" id="contact-google-map" data-map-lat="40.712776" data-map-lng="-74.005974" data-icon-path="assets/images/icons/map-marker.png" data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom={12} data-markers="{
-                                      &quot;marker-1&quot;: [40.712776, -74.005974, &quot;<h4>Branch Office</h4><p>77/99 New York</p>&quot;,&quot;assets/images/icons/map-marker.png&quot;]
-                                  }">
                     </div>
                   </div>
                 </div>

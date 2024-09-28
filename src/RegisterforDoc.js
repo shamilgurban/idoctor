@@ -13,7 +13,7 @@ function App() {
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     {/*Mobile Navigation Toggler*/}
@@ -52,7 +52,7 @@ function App() {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="HomePage"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
+                            <figure class="logo"><a href="/"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
@@ -68,7 +68,7 @@ function App() {
             <div className="menu-backdrop" />
             <div className="close-btn"><i className="fas fa-times" /></div>
             <nav className="menu-box">
-              <div className="nav-logo"><a href="HomePage"><img src="assets/images/logo-2.png" alt="" title /></a></div>
+              <div className="nav-logo"><a href="/"><img src="assets/images/logo-2.png" alt="" title /></a></div>
               <div className="menu-outer">{/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}</div>
               <div className="contact-info">
                 <h4>Əlaqə</h4>

@@ -47,7 +47,7 @@ function App() {
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     {/*Mobile Navigation Toggler*/}
@@ -82,7 +82,7 @@ function App() {
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src="assets/images/small-logo.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src="assets/images/small-logo.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     <nav className="main-menu clearfix">
@@ -101,7 +101,7 @@ function App() {
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="HomePage"><img src={"../assets/images/logo-2.png"} alt="" title=""/></a></div>
+                <div class="nav-logo"><a href="/"><img src={"../assets/images/logo-2.png"} alt="" title=""/></a></div>
                 <div class="menu-outer"></div>
                 <div class="contact-info">
                     <h4>Əlaqə</h4>
@@ -283,7 +283,7 @@ function App() {
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                                 <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="HomePage"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
+                                    <figure class="footer-logo"><a href="/"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
                                     <div class="text">
                                         <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
                                     </div>
@@ -332,7 +332,7 @@ function App() {
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <div class="copyright pull-left"><p><a href="HomePage">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
+                        <div class="copyright pull-left"><p><a href="/">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
                         <ul class="footer-nav pull-right clearfix">
                             <li><a href="index.html">Xidmət Şərtləri</a></li>
                             <li><a href="index.html">Gizlilik Şərtləri</a></li>

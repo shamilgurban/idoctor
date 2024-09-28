@@ -1,4 +1,11 @@
 import './App.css';
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
 
 function App() {
       return (
@@ -357,7 +364,7 @@ function App() {
                                             <li><i class="fas fa-map-marker-alt"></i>
                                                 Bakı, Azərbaycan
                                             </li>
-                                            <li><i class="fas fa-microphone"></i>
+                                            <li><i class="fas fa-phone"></i>
                                                 <a href="tel:23055873407">+994 10 225 15 08</a>
                                             </li>
                                             <li><i class="fas fa-envelope"></i>
@@ -385,9 +392,13 @@ function App() {
           </footer>
           {/* main-footer end */}
           {/*Scroll to top*/}
-          <button className="scroll-top scroll-to-target" data-target="html">
-            <span className="fa fa-arrow-up" />
-          </button>
+          <button 
+        className="scroll-top scroll-to-target" 
+        data-target="html" 
+        onClick={scrollToTop} // Add onClick handler here
+      >
+        <span className="fa fa-arrow-up" />
+      </button>
         </div>
       );
     }

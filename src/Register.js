@@ -1,4 +1,11 @@
 import './App.css';
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
 
 function App() {
   return (
@@ -13,7 +20,7 @@ function App() {
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="index.html"><img src="assets/images/logo-3.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     {/*Mobile Navigation Toggler*/}
@@ -25,28 +32,25 @@ function App() {
                     <nav className="main-menu navbar-expand-md navbar-light">
                       <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                         <ul className="navigation clearfix">
-                          <li><a href="index.html">Ana Səhifə</a>
+                          <li><a href="HomePage">Ana Səhifə</a>
                             
                           </li> 
-                          <li><a href="index.html">Həkimlər</a>
+                          <li><a href="DoctorList">Həkimlər</a>
                             
                           </li>
                           
                           
-                          <li class="dropdown"><a href="index.html">Haqqımızda</a>
-                                                        <ul>
-                                                            <li><a href="team-element-2.html">Yükləmələr</a></li>
-                                                            <li><a href="news-element-1.html">FAQ</a></li>
-                                                        </ul>     
+                          <li><a href="About">Haqqımızda</a>
+
                                         </li> 
-                                        <li><a href="index.html">Əlaqə</a>
+                                        <li><a href="ContactUs">Əlaqə</a>
                                         </li>  
                           
                         </ul>
                       </div>
                     </nav>
                   </div>
-                  <div className="btn-box"><a href="register-page.html" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
+                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
                 </div>
               </div>
             </div>
@@ -55,13 +59,13 @@ function App() {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
+                            <figure class="logo"><a href="HomePage"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
                             </nav>
                         </div>
-                        <div class="btn-box"><a href="register-page.html" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
+                        <div class="btn-box"><a href="Register" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
                     </div>
                 </div>
             </div>
@@ -71,7 +75,7 @@ function App() {
             <div className="menu-backdrop" />
             <div className="close-btn"><i className="fas fa-times" /></div>
             <nav className="menu-box">
-              <div className="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="" title /></a></div>
+              <div className="nav-logo"><a href="HomePage"><img src="assets/images/logo-2.png" alt="" title /></a></div>
               <div className="menu-outer">{/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}</div>
               <div className="contact-info">
                 <h4>Əlaqə</h4>
@@ -120,7 +124,7 @@ function App() {
                     <div class="content-box">
                         <div class="title-box">
                             <h3>Qeydiyyat</h3>
-                            <a href="register-page.html">Həkimsiniz ?</a>
+                            <a href="RegisterforDoc">Həkimsiniz ?</a>
                         </div>
                         <div class="inner">
                             <form action="register-page.html" method="post" class="registration-form">
@@ -231,9 +235,9 @@ function App() {
                                     </div>
                                     <div class="widget-content">
                                         <ul class="links clearfix">
-                                            <li><a href="index.html">Həkimlər</a></li>
-                                            <li><a href="index.html">Klinikalar</a></li>
-                                            <li><a href="index.html">Yüklə</a></li>
+                                            <li><a href="DoctorList">Həkimlər</a></li>
+                                     
+                                            <li><a href="Download">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
                                     </div>
@@ -249,7 +253,7 @@ function App() {
                                             <li><i class="fas fa-map-marker-alt"></i>
                                                 Bakı, Azərbaycan
                                             </li>
-                                            <li><i class="fas fa-microphone"></i>
+                                            <li><i class="fas fa-phone"></i>
                                                 <a href="tel:23055873407">+994 10 225 15 08</a>
                                             </li>
                                             <li><i class="fas fa-envelope"></i>
@@ -277,9 +281,13 @@ function App() {
         </footer>
 
 
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="fa fa-arrow-up"></span>
-        </button>
+        <button 
+        className="scroll-top scroll-to-target" 
+        data-target="html" 
+        onClick={scrollToTop} // Add onClick handler here
+      >
+        <span className="fa fa-arrow-up" />
+      </button>
     </div>
     
     );

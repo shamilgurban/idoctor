@@ -1,5 +1,12 @@
 import './App.css';
 import { Link } from 'react-router-dom';
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
 
 function App() {
   return (
@@ -21,7 +28,7 @@ function App() {
                         </div>
                         <div class="top-right pull-right">
                             <ul class="info clearfix">
-                                <li><a href="register-page.html">Daxil ol</a></li>
+                                <li><a href="Login">Daxil ol</a></li>
                                 <li><a href="service-1.html">Karyera</a></li>
                                 <li class="language">
                                     <a href="index.html">AZ</a>
@@ -41,7 +48,7 @@ function App() {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src={"../assets/images/logo-3.png"} alt=""/></a></figure>
+                            <figure class="logo"><a href="HomePage"><img src={"../assets/images/logo-3.png"} alt=""/></a></figure>
                         </div>
                         <div class="menu-area">
                             <div class="mobile-nav-toggler">
@@ -52,27 +59,15 @@ function App() {
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="index.html">Ana Səhifə</a>
+                                        <li className='current'><a href="HomePage">Ana Səhifə</a>
                                         </li> 
                                         <li><a href="/DoctorList">Həkimlər</a>
                                         </li>
-                                        <li><a href="index.html">Qiymətlər</a>
-                                            <div class="megamenu">
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-6 column">
-                                                    </div>
-                                                    <div class="col-lg-6 column">
-                                                    </div>                                   
-                                                </div>                                        
-                                            </div>
-                                        </li>
-                                        <li class="dropdown"><a href="index.html">Haqqımızda</a>
-                                                        <ul>
-                                                            <li><a href="team-element-2.html">Yükləmələr</a></li>
-                                                            <li><a href="news-element-1.html">FAQ</a></li>
-                                                        </ul>     
+                                        
+                                        <li><a href="/About">Haqqımızda</a>
+                                      
                                         </li>  
-                                        <li><a href="index.html">Əlaqə</a>
+                                        <li><a href="/ContactUs">Əlaqə</a>
                                         </li> 
                                     </ul>
                                 </div>
@@ -87,7 +82,7 @@ function App() {
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
+                            <figure class="logo"><a href="HomePage"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
                         </div>
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
@@ -104,7 +99,7 @@ function App() {
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src={"../assets/images/logo-2.png"} alt="" title=""/></a></div>
+                <div class="nav-logo"><a href="HomePage"><img src={"../assets/images/logo-2.png"} alt="" title=""/></a></div>
                 <div class="menu-outer"></div>
                 <div class="contact-info">
                     <h4>Əlaqə</h4>
@@ -423,9 +418,9 @@ function App() {
                                     </div>
                                     <div class="widget-content">
                                         <ul class="links clearfix">
-                                            <li><a href="index.html">Həkimlər</a></li>
-                                            <li><a href="index.html">Klinikalar</a></li>
-                                            <li><a href="index.html">Yüklə</a></li>
+                                            <li><a href="DoctorList">Həkimlər</a></li>
+                                            
+                                            <li><a href="Download">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
                                     </div>
@@ -441,7 +436,7 @@ function App() {
                                             <li><i class="fas fa-map-marker-alt"></i>
                                                 Bakı, Azərbaycan
                                             </li>
-                                            <li><i class="fas fa-microphone"></i>
+                                            <li><i class="fas fa-phone"></i>
                                                 <a href="tel:23055873407">+994 10 225 15 08</a>
                                             </li>
                                             <li><i class="fas fa-envelope"></i>
@@ -469,9 +464,13 @@ function App() {
         </footer>
 
 
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="fa fa-arrow-up"></span>
-        </button>
+        <button 
+        className="scroll-top scroll-to-target" 
+        data-target="html" 
+        onClick={scrollToTop} // Add onClick handler here
+      >
+        <span className="fa fa-arrow-up" />
+      </button>
     </div>
     );
 }

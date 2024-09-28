@@ -1,4 +1,11 @@
 import './App.css';
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
     
     function App() {
       return (
@@ -177,13 +184,7 @@ import './App.css';
                       </div>
                     </div>
                     <div className="tabs-box">
-                      <div className="tab-btn-box centred">
-                        <ul className="tab-btns tab-buttons clearfix">
-                          <li className="tab-btn active-btn" data-tab="#tab-1">Ümumi baxış</li>
-                          <li className="tab-btn" data-tab="#tab-2">Təcrübə</li>
-                          <li className="tab-btn" data-tab="#tab-4">Rəylər</li>
-                        </ul>
-                      </div>
+                      
                       <div className="tabs-content">
                         <div className="tab active-tab" id="tab-1">
                           <div className="inner-box">
@@ -234,7 +235,7 @@ import './App.css';
                           
                           
                           <div className="btn-box">
-                            <a href="book-appointment.html" className="theme-btn-one">Davam et<i className="icon-Arrow-Right" /></a>
+                            <a href="BookAppointment" className="theme-btn-one">Davam et<i className="icon-Arrow-Right" /></a>
                           </div>
                         </div>
                       </div>
@@ -271,9 +272,9 @@ import './App.css';
                                     </div>
                                     <div class="widget-content">
                                         <ul class="links clearfix">
-                                            <li><a href="index.html">Həkimlər</a></li>
-                                            <li><a href="index.html">Klinikalar</a></li>
-                                            <li><a href="index.html">Yüklə</a></li>
+                                            <li><a href="DoctorList">Həkimlər</a></li>
+                                            
+                                            <li><a href="Download">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
                                     </div>
@@ -289,11 +290,11 @@ import './App.css';
                                             <li><i class="fas fa-map-marker-alt"></i>
                                                 Bakı, Azərbaycan
                                             </li>
-                                            <li><i class="fas fa-microphone"></i>
+                                            <li><i class="fas fa-phone"></i>
                                                 <a href="tel:23055873407">+994 10 225 15 08</a>
                                             </li>
                                             <li><i class="fas fa-envelope"></i>
-                                                <a href="mailto:info@example.com">info@idoktor.az</a>
+                                                <a href="mailto:info@idoktor.az">info@idoktor.az</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -317,9 +318,13 @@ import './App.css';
         </footer>
           {/* main-footer end */}
           {/*Scroll to top*/}
-          <button className="scroll-top scroll-to-target" data-target="html">
-            <span className="fa fa-arrow-up" />
-          </button>
+          <button 
+        className="scroll-top scroll-to-target" 
+        data-target="html" 
+        onClick={scrollToTop} // Add onClick handler here
+      >
+        <span className="fa fa-arrow-up" />
+      </button>
         </div>
       );
     }

@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
   // Function to scroll to the top
   const scrollToTop = () => {
     window.scrollTo({
@@ -15,11 +15,11 @@ function App() {
           <div className="preloader" />
           {/* preloader */}
           {/* main header */}
-          <header className="main-header style-three">
+          <header className="main-header style-two">
             {/* header-lower */}
             <div className="header-lower">
-              <div className="outer-box clearfix">
-                <div className="left-column pull-left">
+              <div className="auto-container">
+                <div className="outer-box">
                   <div className="logo-box">
                     <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
@@ -39,11 +39,11 @@ function App() {
                           <li><a href="DoctorList">Həkimlər</a>
                             
                           </li>
-                        
+                          
                           
                           <li><a href="About">Haqqımızda</a>
-                           
                           </li> 
+                                        
                                         <li><a href="ContactUs">Əlaqə</a>
                                         </li>  
                           
@@ -51,22 +51,7 @@ function App() {
                       </div>
                     </nav>
                   </div>
-                </div>
-                <div className="right-column pull-right">
-                  <div className="author-box">
-                    <div className="icon-box"><a href="index.html"><i className="icon-Bell" /></a></div>
-                    <div className="author">
-                      <figure className="author-image"><img src="assets/images/resource/author-1.png" alt="" /></figure>
-                      <div className="select-box">
-                        <select className="wide">
-                          <option data-display="Nurlan İbrahimov"></option>
-                          <option value={1}>Profil</option>
-                          <option value={2}>Tənzimləmələr</option>
-                          <option value={4}>Hesabdan çıxış</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
                 </div>
               </div>
             </div>
@@ -82,14 +67,7 @@ function App() {
                       {/*Keep This Empty / Menu will come through Javascript*/}
                     </nav>
                   </div>
-                  <div className="select-box">
-                        <select className="wide">
-                          <option data-display="Nurlan İbrahimov"></option>
-                          <option value={1}>Profil</option>
-                          <option value={2}>Tənzimləmələr</option>
-                          <option value={4}>Hesabdan çıxış</option>
-                        </select>
-                      </div>
+                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
                 </div>
               </div>
             </div>
@@ -130,15 +108,15 @@ function App() {
               </div>
               <div className="auto-container">
                 <div className="title">
-                  <h1>Həkim qəbulu</h1>
+                  <h1>Şifrəni yenilə</h1>
                 </div>
               </div>
             </div>
             
           </section>
           {/*page-title-two end*/}
-          {/* confirm-section */}
-          <section className="confirm-section centred bg-color-3">
+          {/* registration-section */}
+          <section className="registration-section bg-color-3">
             <div className="pattern">
               <div className="pattern-1" style={{backgroundImage: 'url(assets/images/shape/shape-85.png)'}} />
               <div className="pattern-2" style={{backgroundImage: 'url(assets/images/shape/shape-86.png)'}} />
@@ -146,17 +124,33 @@ function App() {
             <div className="auto-container">
               <div className="inner-box">
                 <div className="content-box">
-                  <div className="icon-box">
-                    <i className="icon-Check-mark-2" />
+                  <div className="title-box">
+                    <h3>Şifrəni yenilə</h3>
+                    
                   </div>
-                  <h3>Təşəkkür edirik</h3>
-                  <p>Tezliklə e-poçtla təsdiq məktubu alacaqsınız</p>
-                  <a href="mailto:info@example.com">info@idoktor.az</a>
+                  <div className="inner">
+                    <form action="register-page.html" method="post" className="registration-form">
+                      <div className="row clearfix">
+                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
+                          <label>Email</label>
+                          <input type="email" name="email" placeholder="E-poçtunuzu daxil edin" required />
+                        </div>
+                        
+                        
+                        <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                          <button type="submit" className="theme-btn-one">Şifrəni sıfırla<i className="icon-Arrow-Right" /></button>
+                        </div>
+                      </div>
+                    </form>
+                    <div className="text"><span>or</span></div>
+                    
+                    <div className="login-now"><p>Hesabınız yoxdur ? <a href="register-page.html">Qeydiyyatdan keç</a></p></div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* confirm-section end */}
+          {/* registration-section end */}
           {/* agent-section */}
           <section class="agent-section">
             <div class="auto-container">
@@ -219,7 +213,7 @@ function App() {
                                     <div class="widget-content">
                                         <ul class="links clearfix">
                                             <li><a href="DoctorList">Həkimlər</a></li>
-                                            
+                                           
                                             <li><a href="Download">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
@@ -275,4 +269,4 @@ function App() {
       );
     }
 
-  export default App;
+    export default App;

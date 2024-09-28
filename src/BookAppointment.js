@@ -318,7 +318,7 @@ function App() {
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                                 <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="index.html"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
+                                    <figure class="footer-logo"><a href="HomePage"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
                                     <div class="text">
                                         <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
                                     </div>

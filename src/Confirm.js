@@ -151,7 +151,7 @@ function App() {
                   </div>
                   <h3>Təşəkkür edirik</h3>
                   <p>Tezliklə e-poçtla təsdiq məktubu alacaqsınız</p>
-                  <a href="mailto:info@example.com">info@idoktor.az</a>
+                  <a href="mailto:info@idoktor.az">info@idoktor.az</a>
                 </div>
               </div>
             </div>

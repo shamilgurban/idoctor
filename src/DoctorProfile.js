@@ -21,7 +21,7 @@ function App() {
               <div className="outer-box clearfix">
                 <div className="left-column pull-left">
                   <div className="logo-box">
-                    <figure className="logo"><a href="index.html"><img src="assets/images/logo-3.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     {/*Mobile Navigation Toggler*/}
@@ -33,27 +33,15 @@ function App() {
                     <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="/">Ana Səhifə</a>
+                                        <li><a href="HomePage">Ana Səhifə</a>
                                         </li> 
-                                        <li><a href="index.html">Həkimlər</a>
+                                        <li><a href="DoctorList">Həkimlər</a>
                                         </li>
-                                        <li><a href="index.html">Qiymətlər</a>
-                                            <div class="megamenu">
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-6 column">
-                                                    </div>
-                                                    <div class="col-lg-6 column">
-                                                    </div>                                   
-                                                </div>                                        
-                                            </div>
-                                        </li>
-                                        <li class="dropdown"><a href="index.html">Haqqımızda</a>
-                                                        <ul>
-                                                            <li><a href="team-element-2.html">Yükləmələr</a></li>
-                                                            <li><a href="news-element-1.html">FAQ</a></li>
-                                                        </ul>     
+                                        
+                                        <li class="dropdown"><a href="About">Haqqımızda</a>
+                                                          
                                         </li>  
-                                        <li><a href="index.html">Əlaqə</a>
+                                        <li><a href="ContactUs">Əlaqə</a>
                                         </li> 
                                     </ul>
                                 </div>
@@ -81,7 +69,7 @@ function App() {
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="index.html"><img src="assets/images/small-logo.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="HomePage"><img src="assets/images/small-logo.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     <nav className="main-menu clearfix">
@@ -106,7 +94,7 @@ function App() {
             <div className="menu-backdrop" />
             <div className="close-btn"><i className="fas fa-times" /></div>
             <nav className="menu-box">
-              <div className="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="" title /></a></div>
+              <div className="nav-logo"><a href="HomePage"><img src="assets/images/logo-2.png" alt="" title /></a></div>
               <div className="menu-outer">{/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}</div>
               <div className="contact-info">
                 <h4>Əlaqə</h4>
@@ -332,7 +320,7 @@ function App() {
                   <div className="row clearfix">
                     <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
                       <div className="footer-widget logo-widget">
-                        <figure className="footer-logo"><a href="index.html"><img src="assets/images/footer-logo.png" alt="" /></a></figure>
+                        <figure className="footer-logo"><a href="HomePage"><img src="assets/images/footer-logo.png" alt="" /></a></figure>
                         <div className="text">
                           <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
                         </div>
@@ -345,9 +333,9 @@ function App() {
                                     </div>
                                     <div class="widget-content">
                                         <ul class="links clearfix">
-                                            <li><a href="index.html">Həkimlər</a></li>
-                                            <li><a href="index.html">Klinikalar</a></li>
-                                            <li><a href="index.html">Yüklə</a></li>
+                                            <li><a href="DoctorList">Həkimlər</a></li>
+                                            
+                                            <li><a href="Download">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
                                     </div>
@@ -381,7 +369,7 @@ function App() {
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <div class="copyright pull-left"><p><a href="index.html">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
+                        <div class="copyright pull-left"><p><a href="HomePage">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
                         <ul class="footer-nav pull-right clearfix">
                             <li><a href="index.html">Xidmət Şərtləri</a></li>
                             <li><a href="index.html">Gizlilik Şərtləri</a></li>

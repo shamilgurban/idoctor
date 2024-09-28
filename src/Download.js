@@ -47,7 +47,7 @@ import './App.css';
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src={".//assets/images/logo-3.png"} alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src={".//assets/images/logo-3.png"} alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     <div className="mobile-nav-toggler">
@@ -58,7 +58,7 @@ import './App.css';
                     <nav className="main-menu navbar-expand-md navbar-light">
                       <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                         <ul className="navigation clearfix">
-                          <li><a href="HomePage">Ana Səhifə</a>
+                          <li><a href="/">Ana Səhifə</a>
                           </li> 
                           <li><a href="DoctorList">Həkimlər</a>
                             

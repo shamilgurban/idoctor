@@ -17,7 +17,7 @@ import ForgotPass from './ForgotPass'
 function App() {
   return (
       <Routes>
-        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/DoctorList" element={<DoctorList />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/ContactUs" element={<ContactUS />} />

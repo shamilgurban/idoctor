@@ -65,7 +65,7 @@ function App() {
                     <nav className="main-menu navbar-expand-md navbar-light">
                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="HomePage">Ana Səhifə</a>
+                                        <li><a href="/">Ana Səhifə</a>
                                         </li> 
                                         <li className='current'><a href="DoctorList">Həkimlər</a>
                                         </li>

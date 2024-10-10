@@ -1,0 +1,38 @@
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    overflow: hidden;
+    width: 180px;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 180px;
+}
+
+.submenu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border: 0.5px solid gray;
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.submenu-container {
+    display: flex;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}

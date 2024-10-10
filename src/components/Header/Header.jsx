@@ -99,7 +99,7 @@ const Header = () => {
                   {user ? (
                     <div className="btn-box">Salam, {user.name} {user.surname}</div>
                   ) : (
-                    <Link to="/login">Daxil ol</Link>
+                    <a href="/login">Daxil ol</a>
                   )}
                 </li>
                 <li className="language">

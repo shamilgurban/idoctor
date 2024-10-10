@@ -131,7 +131,7 @@ function Register() {
             <div className="content-box">
               <div className="title-box">
                 <h3>Qeydiyyat</h3>
-                <Link to="/registerdoc">Həkimsiniz ?</Link>
+                <a href="/registerdoc">Həkimsiniz ?</a>
               </div>
               <div className="inner">
                 {apiError && <div className="error">{apiError}</div>} 

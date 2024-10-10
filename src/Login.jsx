@@ -7,71 +7,13 @@ import './App.css';
     });
   };
 
-function App() {
+function Login() {
       return (
   
         <div className="boxed_wrapper">
           {/* preloader */}
           <div className="preloader" />
           {/* preloader */}
-          {/* main header */}
-          <header className="main-header style-two">
-            {/* header-lower */}
-            <div className="header-lower">
-              <div className="auto-container">
-                <div className="outer-box">
-                  <div className="logo-box">
-                    <figure className="logo"><a href="/"><img src="assets/images/logo-3.png" alt="" /></a></figure>
-                  </div>
-                  <div className="menu-area">
-                    {/*Mobile Navigation Toggler*/}
-                    <div className="mobile-nav-toggler">
-                      <i className="icon-bar" />
-                      <i className="icon-bar" />
-                      <i className="icon-bar" />
-                    </div>
-                    <nav className="main-menu navbar-expand-md navbar-light">
-                      <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                        <ul className="navigation clearfix">
-                          <li><a href="/">Ana Səhifə</a>
-                            
-                          </li> 
-                          <li><a href="DoctorList">Həkimlər</a>
-                            
-                          </li>
-                          
-                          
-                          <li><a href="About">Haqqımızda</a>
-                          </li> 
-                                        
-                                        <li><a href="ContactUs">Əlaqə</a>
-                                        </li>  
-                          
-                        </ul>
-                      </div>
-                    </nav>
-                  </div>
-                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
-                </div>
-              </div>
-            </div>
-            {/*sticky Header*/}
-            <div className="sticky-header">
-              <div className="auto-container">
-                <div className="outer-box">
-                  <div className="logo-box">
-                    <figure className="logo"><a href="/"><img src="assets/images/small-logo.png" alt="" /></a></figure>
-                  </div>
-                  <div className="menu-area">
-                    <nav className="main-menu clearfix">
-                      {/*Keep This Empty / Menu will come through Javascript*/}
-                    </nav>
-                  </div>
-                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
-                </div>
-              </div>
-            </div>
-          </header>
           {/* main-header end */}
           {/* Mobile Menu  */}
           <div className="mobile-menu">
@@ -193,76 +135,6 @@ function App() {
             </div>
         </section>
           {/* agent-section */}
-          {/* main-footer */}
-          <footer class="main-footer">
-            <div class="footer-top">
-                <div class="pattern-layer">
-                    <div class="pattern-1" style={{backgroundImage: `url('../assets/images/shape/shape-30.png')`}}></div>
-                    <div class="pattern-2" style={{backgroundImage: `url('../assets/images/shape/shape-31.png')`}}></div>
-                </div>
-                <div class="auto-container">
-                    <div class="widget-section">
-                        <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="/"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
-                                    <div class="text">
-                                        <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget links-widget">
-                                    <div class="widget-title">
-                                        <h3>Keçidlər</h3>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="links clearfix">
-                                            <li><a href="DoctorList">Həkimlər</a></li>
-                                           
-                                            <li><a href="Download">Yüklə</a></li>
-                                            <li><a href="index.html">Gizlilik Şərtləri</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                                <div class="footer-widget contact-widget">
-                                    <div class="widget-title">
-                                        <h3>Əlaqə</h3>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="info-list clearfix">
-                                            <li><i class="fas fa-map-marker-alt"></i>
-                                                Bakı, Azərbaycan
-                                            </li>
-                                            <li><i class="fas fa-phone"></i>
-                                                <a href="tel:23055873407">+994 10 225 15 08</a>
-                                            </li>
-                                            <li><i class="fas fa-envelope"></i>
-                                                <a href="mailto:info@example.com">info@idoktor.az</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="auto-container">
-                    <div class="inner-box clearfix">
-                        <div class="copyright pull-left"><p><a href="/">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
-                        <ul class="footer-nav pull-right clearfix">
-                            <li><a href="index.html">Xidmət Şərtləri</a></li>
-                            <li><a href="index.html">Gizlilik Şərtləri</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
           {/* main-footer end */}
           {/*Scroll to top*/}
           <button 
@@ -276,4 +148,4 @@ function App() {
       );
     }
 
-    export default App;
+    export default Login;

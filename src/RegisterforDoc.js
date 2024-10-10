@@ -1,23 +1,15 @@
 import './App.css';
-  // Function to scroll to the top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Smooth scrolling
-    });
-  };
 
 function App() {
-      return (
-  
-        <div className="boxed_wrapper">
-          {/* preloader */}
-          <div className="preloader" />
-          {/* preloader */}
-          {/* main header */}
-          <header className="main-header style-two">
-            {/* header-lower */}
-            <div className="header-lower">
+  return (
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+
+        <header class="main-header style-two">
+
+        <div className="header-lower">
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
@@ -42,8 +34,8 @@ function App() {
                           
                           
                           <li><a href="About">Haqqımızda</a>
-                          </li> 
-                                        
+
+                                        </li> 
                                         <li><a href="ContactUs">Əlaqə</a>
                                         </li>  
                           
@@ -55,26 +47,24 @@ function App() {
                 </div>
               </div>
             </div>
-            {/*sticky Header*/}
-            <div className="sticky-header">
-              <div className="auto-container">
-                <div className="outer-box">
-                  <div className="logo-box">
-                    <figure className="logo"><a href="/"><img src="assets/images/small-logo.png" alt="" /></a></figure>
-                  </div>
-                  <div className="menu-area">
-                    <nav className="main-menu clearfix">
-                      {/*Keep This Empty / Menu will come through Javascript*/}
-                    </nav>
-                  </div>
-                  <div className="btn-box"><a href="Register" className="theme-btn-one"><i className="icon-image" />Bizə qoşul</a></div>
+
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="outer-box">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="/"><img src={"../assets/images/small-logo.png"} alt=""/></a></figure>
+                        </div>
+                        <div class="menu-area">
+                            <nav class="main-menu clearfix">
+                            </nav>
+                        </div>
+                        <div class="btn-box"><a href="Register" class="theme-btn-one"><i class="icon-image"></i>Bizə qoşul</a></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </header>
-          {/* main-header end */}
-          {/* Mobile Menu  */}
-          <div className="mobile-menu">
+        </header>
+
+        <div className="mobile-menu">
             <div className="menu-backdrop" />
             <div className="close-btn"><i className="fas fa-times" /></div>
             <nav className="menu-box">
@@ -98,68 +88,87 @@ function App() {
                 </ul>
               </div>
             </nav>
-          </div>{/* End Mobile Menu */}
-          {/*page-title-two*/}
-          <section className="page-title-two">
-            <div className="title-box centred bg-color-2">
-              <div className="pattern-layer">
-                <div className="pattern-1" style={{backgroundImage: 'url(assets/images/shape/shape-70.png)'}} />
-                <div className="pattern-2" style={{backgroundImage: 'url(assets/images/shape/shape-71.png)'}} />
-              </div>
-              <div className="auto-container">
-                <div className="title">
-                  <h1>Daxil ol</h1>
+          </div>
+
+
+        <section class="page-title-two">
+            <div class="title-box centred bg-color-2">
+                <div class="pattern-layer">
+                    <div class="pattern-1" style={{backgroundImage: `url('../assets/images/shape/shape-70.png')`}}></div>
+                    <div class="pattern-2" style={{backgroundImage: `url('../assets/images/shape/shape-71.png')`}}></div>
                 </div>
-              </div>
+                <div class="auto-container">
+                    <div class="title">
+                        <h1>Həkim Qeydiyyatı</h1>
+                    </div>
+                </div>
             </div>
             
-          </section>
-          {/*page-title-two end*/}
-          {/* registration-section */}
-          <section className="registration-section bg-color-3">
-            <div className="pattern">
-              <div className="pattern-1" style={{backgroundImage: 'url(assets/images/shape/shape-85.png)'}} />
-              <div className="pattern-2" style={{backgroundImage: 'url(assets/images/shape/shape-86.png)'}} />
+        </section>
+
+
+        <section class="registration-section bg-color-3">
+            <div class="pattern">
+                <div class="pattern-1" style={{backgroundImage: `url('../assets/images/shape/shape-85.png')`}}></div>
+                <div class="pattern-2" style={{backgroundImage: `url('../assets/images/shape/shape-86.png')`}}></div>
             </div>
-            <div className="auto-container">
-              <div className="inner-box">
-                <div className="content-box">
-                  <div className="title-box">
-                    <h3>Daxil ol</h3>
-                    
-                  </div>
-                  <div className="inner">
-                    <form action="register-page.html" method="post" className="registration-form">
-                      <div className="row clearfix">
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                          <label>Email</label>
-                          <input type="email" name="email" placeholder="E-poçtunuzu daxil edin" required />
+            <div class="auto-container">
+                <div class="inner-box">
+                    <div class="content-box">
+                        <div class="title-box">
+                            <h3>Qeydiyyat</h3>
+                            <a href="register-page.html">Həkimsiniz ?</a>
                         </div>
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                          <label>Şifrə</label>
-                          <input type="password" name="password" placeholder="Şifrənizi daxil edin" required />
+                        <div class="inner">
+                            <form action="register-page.html" method="post" class="registration-form">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <label>Ad</label>
+                                        <input type="text" name="fname" placeholder="Adınızı daxil edin" required=""></input>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <label>Soyad</label>
+                                        <input type="text" name="lname" placeholder="Soyadınızı daxil edin" required=""></input>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="E-poçtunuzu daxil edin" required=""></input>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Şifrə</label>
+                                        <input type="password" name="password" placeholder="Şifrəni daxil edin" required=""></input>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Şifrəni təsdiqləyin</label>
+                                        <input type="password" name="cpassword" placeholder="Şifrəni təsdiqləyin" required=""></input>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <div class="custom-check-box">
+                                            <div class="custom-controls-stacked">
+                                                <label class="custom-control material-checkbox">
+                                                    <input type="checkbox" class="material-control-input"></input>
+                                                    <span class="material-control-indicator"></span>
+                                                    <span class="description">Mən <a href="book-appointment.html">şərtləri</a> və <a href="book-appointment.html">ümumi siyasəti</a> qəbul edirəm</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn-one">Qeydiyyatdan keç<i class="icon-Arrow-Right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="text"><span>or</span></div>
+                            
+                            <div class="login-now"><p>Hesabınız var ? <a href="register-page.html">Daxil ol</a></p></div>
                         </div>
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                          <div className="forgot-passowrd clearfix">
-                            <a href="ForgotPass">Şifrəmi unutdum ?</a>
-                          </div>
-                        </div>
-                        <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                          <button type="submit" className="theme-btn-one">Daxil ol<i className="icon-Arrow-Right" /></button>
-                        </div>
-                      </div>
-                    </form>
-                    <div className="text"><span>or</span></div>
-                    
-                    <div className="login-now"><p>Hesabınız yoxdur ? <a href="register-page.html">Qeydiyyatdan keç</a></p></div>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
-          {/* registration-section end */}
-          {/* agent-section */}
-          <section class="agent-section">
+        </section>
+
+
+        <section class="agent-section">
             <div class="auto-container">
                 <div class="inner-container bg-color-2">
                     <div class="row clearfix">
@@ -192,9 +201,9 @@ function App() {
                 </div>
             </div>
         </section>
-          {/* agent-section */}
-          {/* main-footer */}
-          <footer class="main-footer">
+
+
+        <footer class="main-footer">
             <div class="footer-top">
                 <div class="pattern-layer">
                     <div class="pattern-1" style={{backgroundImage: `url('../assets/images/shape/shape-30.png')`}}></div>
@@ -205,7 +214,7 @@ function App() {
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                                 <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="/"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
+                                    <figure class="footer-logo"><a href="index.html"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
                                     <div class="text">
                                         <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
                                     </div>
@@ -219,9 +228,9 @@ function App() {
                                     </div>
                                     <div class="widget-content">
                                         <ul class="links clearfix">
-                                            <li><a href="DoctorList">Həkimlər</a></li>
-                                           
-                                            <li><a href="Download">Yüklə</a></li>
+                                            <li><a href="index.html">Həkimlər</a></li>
+                                            <li><a href="index.html">Klinikalar</a></li>
+                                            <li><a href="index.html">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
                                     </div>
@@ -237,7 +246,7 @@ function App() {
                                             <li><i class="fas fa-map-marker-alt"></i>
                                                 Bakı, Azərbaycan
                                             </li>
-                                            <li><i class="fas fa-phone"></i>
+                                            <li><i class="fas fa-microphone"></i>
                                                 <a href="tel:23055873407">+994 10 225 15 08</a>
                                             </li>
                                             <li><i class="fas fa-envelope"></i>
@@ -254,7 +263,7 @@ function App() {
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <div class="copyright pull-left"><p><a href="/">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
+                        <div class="copyright pull-left"><p><a href="index.html">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
                         <ul class="footer-nav pull-right clearfix">
                             <li><a href="index.html">Xidmət Şərtləri</a></li>
                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
@@ -263,17 +272,14 @@ function App() {
                 </div>
             </div>
         </footer>
-          {/* main-footer end */}
-          {/*Scroll to top*/}
-          <button 
-        className="scroll-top scroll-to-target" 
-        data-target="html" 
-        onClick={scrollToTop} // Add onClick handler here
-      >
-        <span className="fa fa-arrow-up" />
-      </button>
-        </div>
-      );
-    }
 
-    export default App;
+
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fa fa-arrow-up"></span>
+        </button>
+    </div>
+    
+    );
+}
+
+export default App;

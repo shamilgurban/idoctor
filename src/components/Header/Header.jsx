@@ -149,10 +149,10 @@ const Header = () => {
                   {renderUserDropdown()}
                 </>
               ) : (
-                <Link to="/Register" className="theme-btn-one text-nowrap">
+                <a href="/Register" className="theme-btn-one text-nowrap">
                   Qeydiyyatdan Keç
                    <i className="icon-Arrow-Right mx-2" />
-                </Link>
+                </a>
               )}
             </div>
           </div>

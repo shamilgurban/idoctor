@@ -226,7 +226,7 @@ function Register() {
                 </form>
                  <div className="text"><span>və ya</span></div>
                 <div className="login-now">
-                  <p>Hesabınız var? <Link to="/login">Daxil ol</Link></p>
+                  <p>Hesabınız var? <a href="/login">Daxil ol</a></p>
                 </div>
               </div>
             </div>

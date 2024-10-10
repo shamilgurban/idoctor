@@ -21,7 +21,7 @@ import './App.css';
               <div className="outer-box clearfix">
                 <div className="left-column pull-left">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src="assets/images/logo-3.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src="assets/images/logo-3.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     {/*Mobile Navigation Toggler*/}
@@ -33,7 +33,7 @@ import './App.css';
                     <nav className="main-menu navbar-expand-md navbar-light">
                       <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                         <ul className="navigation clearfix">
-                          <li><a href="HomePage">Ana Səhifə</a>
+                          <li><a href="/">Ana Səhifə</a>
                             
                           </li> 
                           <li><a href="DoctorList">Həkimlər</a>
@@ -75,7 +75,7 @@ import './App.css';
               <div className="auto-container">
                 <div className="outer-box">
                   <div className="logo-box">
-                    <figure className="logo"><a href="HomePage"><img src="assets/images/small-logo.png" alt="" /></a></figure>
+                    <figure className="logo"><a href="/"><img src="assets/images/small-logo.png" alt="" /></a></figure>
                   </div>
                   <div className="menu-area">
                     <nav className="main-menu clearfix">
@@ -100,7 +100,7 @@ import './App.css';
             <div className="menu-backdrop" />
             <div className="close-btn"><i className="fas fa-times" /></div>
             <nav className="menu-box">
-              <div className="nav-logo"><a href="HomePage"><img src="assets/images/logo-2.png" alt="" title /></a></div>
+              <div className="nav-logo"><a href="/"><img src="assets/images/logo-2.png" alt="" title /></a></div>
               <div className="menu-outer">{/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}</div>
               <div className="contact-info">
                 <h4>Əlaqə</h4>
@@ -255,7 +255,7 @@ import './App.css';
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                                 <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="HomePage"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
+                                    <figure class="footer-logo"><a href="/"><img src={"../assets/images/footer-logo.png"} alt=""/></a></figure>
                                     <div class="text">
                                         <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
                                     </div>
@@ -304,7 +304,7 @@ import './App.css';
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <div class="copyright pull-left"><p><a href="HomePage">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
+                        <div class="copyright pull-left"><p><a href="/">iDoctor</a> &copy; 2024 Bütün hüquqlar qorunur</p></div>
                         <ul class="footer-nav pull-right clearfix">
                             <li><a href="index.html">Xidmət Şərtləri</a></li>
                             <li><a href="index.html">Gizlilik Şərtləri</a></li>

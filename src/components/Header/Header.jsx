@@ -121,19 +121,19 @@ const Header = () => {
           <div className="outer-box">
             <div className="logo-box">
               <figure className="logo">
-                <Link to="/HomePage">
+                <a href="/">
                   <img src="./assets/images/logo-3.png" alt="Logo" />
-                </Link>
+                </a>
               </figure>
             </div>
             <div className="menu-area">
               <nav className="main-menu navbar-expand-md navbar-light">
                 <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul className="navigation clearfix">
-                    <li><Link to="/">Ana Səhifə</Link></li>
-                    <li><Link to="/Doctors">Həkimlər</Link></li>
-                    <li className="current"><Link to="/About">Haqqımızda</Link></li>
-                    <li><Link to="/Contact">Əlaqə</Link></li>
+                    <li className={window.location.pathname == "/" ? "current": ""}><a href="/">Ana Səhifə</a></li>
+                    <li className={window.location.pathname == "/Doctors" ? "current": ""}><a href="/Doctors">Həkimlər</a></li>
+                    <li className={window.location.pathname == "/About" ? "current": ""}><a  href="/About">Haqqımızda</a></li>
+                    <li className={window.location.pathname == "/Contact" ? "current": ""}><a href="/Contact">Əlaqə</a></li>
                   </ul>
                 </div>
               </nav>

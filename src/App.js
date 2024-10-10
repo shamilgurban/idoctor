@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Register from "./Register";
-import RegisterDoc from "./RegisterforDoc";
+import Register from "./pages/Register";
+import RegisterDoc from "./pages/RegisterforDoc";
 import About from "./pages/About";
 import Login from "./Login";
 import Layout from "./components/Layout/Layout";

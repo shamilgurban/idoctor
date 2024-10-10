@@ -1,11 +1,11 @@
-import './App.css'
-  // Function to scroll to the top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Smooth scrolling
-    });
-  };
+import "./App.css";
+// Function to scroll to the top
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scrolling
+  });
+};
 
 function App() {
       return (
@@ -385,8 +385,8 @@ function App() {
       >
         <span className="fa fa-arrow-up" />
       </button>
-        </div>
-      );
-    }
+    </div>
+  );
+}
 
-    export default App;
+export default App;

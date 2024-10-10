@@ -1,13 +1,12 @@
-import './App.css';
-  // Function to scroll to the top
+import '../App.css';
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scrolling
+      behavior: 'smooth',
     });
   };
 
-function App() {
+function Contact() {
       return (
   
         <div className="boxed_wrapper">
@@ -353,5 +352,4 @@ function App() {
         </div>
       );
     }
-
-    export default App;
+export default Contact;

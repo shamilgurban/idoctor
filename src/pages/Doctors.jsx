@@ -1,15 +1,15 @@
-import './App.css';
+import '../App.css';
 import React, { useState } from 'react';
-  // Function to scroll to the top
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scrolling
+      behavior: 'smooth', 
     });
   };
 
 
-function App() {
+function Doctors() {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const options = [
@@ -577,7 +577,7 @@ function App() {
         <button 
         className="scroll-top scroll-to-target" 
         data-target="html" 
-        onClick={scrollToTop} // Add onClick handler here
+        onClick={scrollToTop} 
       >
         <span className="fa fa-arrow-up" />
       </button>
@@ -585,4 +585,4 @@ function App() {
       );
     }
 
-    export default App;
+export default Doctors;

@@ -6,8 +6,9 @@ import RegisterDoc from "./pages/RegisterforDoc";
 import About from "./pages/About";
 import Login from "./Login";
 import Layout from "./components/Layout/Layout";
-import DoctorDetails from "./DoctorDetails";
 import Test from "./pages/Test";
+import Contact from "./pages/Contact"
+import Doctors from "./pages/Doctors";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/RegisterDoc" element={<RegisterDoc />} />
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/DoctorDetails" element={<DoctorDetails />} />
+        <Route path="/Doctors" element={<Doctors />} />
+        <Route path="/Contact" element={<Contact />} />
         <Route path="/Test" element={<Test />} />
         <Route path="/" element={<Home />} />
       </Routes>

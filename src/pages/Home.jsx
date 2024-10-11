@@ -214,8 +214,8 @@ function App() {
                         <a href="doctors-profile.html">Onkologiya</a>
                       </li>
                     </ul>
-                    <div class="btn-box">
-                      <a href="doctors-1.html" class="theme-btn-one">
+                    <div className="btn-box">
+                      <a href="doctors-1.html" className="theme-btn-one text-nowrap">
                         Hamısına bax<i class="icon-Arrow-Right"></i>
                       </a>
                     </div>
@@ -311,9 +311,9 @@ function App() {
                         </a>
                       </li>
                     </ul>
-                    <div class="btn-box">
-                      <a href="doctors-1.html" class="theme-btn-one">
-                        Hamısına bax<i class="icon-Arrow-Right"></i>
+                    <div className="btn-box">
+                      <a href="doctors-1.html" className="theme-btn-one text-nowrap">
+                        Hamısına bax<i className="icon-Arrow-Right"></i>
                       </a>
                     </div>
                     <div class="link">
@@ -502,11 +502,11 @@ function App() {
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">
               <div class="content_block_2">
                 <div class="content-box">
-                  <div class="sec-title light">
+                  <div className="sec-title light">
                     <p>Yüklə</p>
                     <h2>Sağlamlığınız artıq cibinizdə</h2>
                   </div>
-                  <div class="btn-box clearfix">
+                  <div class="btn-box clearfix text-nowrap">
                     <a href="index.html" class="download-btn app-store">
                       <i class="fab fa-apple"></i>
                       <span>Download on</span>

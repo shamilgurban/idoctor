@@ -234,7 +234,7 @@ function App() {
                     <h2>Sağlamlığınız artıq cibinizdə</h2>
                   </div>
 
-                  <div className="btn-box clearfix">
+                  <div className="btn-box clearfix text-nowrap">
                     <a href="index.html" className="download-btn app-store">
                       <i className="fab fa-apple" />
                       <span>Yüklə</span>

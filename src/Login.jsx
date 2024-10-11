@@ -156,61 +156,6 @@ function Login() {
           </div>
         </div>
       </section>
-      <footer className="main-footer">
-        <div className="footer-top">
-          <div className="pattern-layer">
-            <div className="pattern-1" style={{ backgroundImage: `url('../assets/images/shape/shape-30.png')` }}></div>
-            <div className="pattern-2" style={{ backgroundImage: `url('../assets/images/shape/shape-31.png')` }}></div>
-          </div>
-          <div className="auto-container">
-            <div className="widget-section">
-              <div className="row clearfix">
-                <div className="col-lg-4 col-md-6 col-sm-12 footer-column">
-                  <div className="footer-widget logo-widget">
-                    <figure className="footer-logo"><a href="/"><img src={"../assets/images/footer-logo.png"} alt="" /></a></figure>
-                    <div className="text">
-                      <p>Sağlamlığa gedən yolu bizimlə dəyərləndir.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
-                  <div className="footer-widget links-widget">
-                    <div className="widget-title">
-                      <h3>Keçidlər</h3>
-                    </div>
-                    <div className="widget-content">
-                      <ul className="links clearfix">
-                        <li><a href="DoctorList">Həkimlər</a></li>
-                        <li><a href="Download">Yüklə</a></li>
-                        <li><a href="index.html">Gizlilik Şərtləri</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
-                  <div className="footer-widget contact-widget">
-                    <div className="widget-title">
-                      <h3>Əlaqə</h3>
-                    </div>
-                    <div className="widget-content">
-                      <ul className="info-list clearfix">
-                        <li><i className="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</li>
-                        <li><i className="fas fa-phone"></i>
-                          <a href="tel:23055873407">+994 10 225 15 08</a>
-                        </li>
-                        <li><i className="fas fa-envelope"></i>
-                          <a href="mailto:info@example.com">info@idoktor.az</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
       <ToastContainer />
     </div>
   );

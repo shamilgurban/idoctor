@@ -97,7 +97,7 @@ const Header = () => {
               <ul className="info clearfix">
                 <li>
                   {user ? (
-                    <div className="btn-box">Salam, {user.name} {user.surname}</div>
+                    <div className="btn-box text-nowrap mx-4">Salam, {user.name} {user.surname}</div>
                   ) : (
                     <a href="/login">Daxil ol</a>
                   )}

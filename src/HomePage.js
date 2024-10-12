@@ -1,5 +1,7 @@
 import './App.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
   // Function to scroll to the top
   const scrollToTop = () => {
     window.scrollTo({
@@ -9,6 +11,15 @@ import { Link } from 'react-router-dom';
   };
 
 function App() {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const openPopup = () => {
+        setIsPopupOpen(true);
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(false);
+    };
   return (
         
     <div class="boxed_wrapper">
@@ -193,21 +204,55 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 doctors-block">
-                            <div class="doctors-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                    <div class="pattern" style={{backgroundImage: `url('../assets/images/shape/shape-26.png')`}}></div>
-                                    <div class="pattern-2" style={{backgroundImage: `url('../assets/images/shape/shape-36.png')`}}></div>
-                                    <h3><br />Analiz yoxlanışı</h3>
-                                    <ul class="doctors-list clearfix">
-                                        <li><a href="doctors-profile.html">Peşəkar həkimlər tərəfindən analizin yoxlanışı</a></li>
-                                        
-                                    </ul>
-                                    <div class="btn-box"><a href="doctors-1.html" class="theme-btn-one">Faylı Yüklə<i class="icon-Arrow-Right"></i></a></div>
-                                    <div class="link"><a href="doctors-1.html"><i class="icon-Arrow-Right"></i></a></div>
+                
+                        <div className="col-lg-4 col-md-6 col-sm-12 doctors-block">
+                                <div className="doctors-block-one">
+                                    <div className="inner-box">
+                                        <div className="pattern" style={{ backgroundImage: `url('../assets/images/shape/shape-26.png')` }}></div>
+                                        <div className="pattern-2" style={{ backgroundImage: `url('../assets/images/shape/shape-36.png')` }}></div>
+                                        <h3><br />Analiz yoxlanışı</h3>
+                                        <ul className="doctors-list clearfix">
+                                            <li><a href="doctors-profile.html">Peşəkar həkimlər tərəfindən analizin yoxlanışı</a></li>
+                                        </ul>
+                                        <div className="btn-box">
+                                            <button className="theme-btn-one" onClick={openPopup}>Faylı Yüklə<i className="icon-Arrow-Right"></i></button>
+                                        </div>
+                                        <div className="link"><a ><i className="icon-Arrow-Right"></i></a></div>
+                                    </div>
                                 </div>
+
+                                {isPopupOpen && (
+                                    <div className="popup" onClick={closePopup}>
+                                        <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                                            <span className="close" onClick={closePopup}>&times;</span>
+                                            <h2>Analiz</h2>
+
+
+                                            <select className="analysis-dropdown my-3">
+                                                <option value="" selected disabled>
+                                                    Zəhmət olmasa analiz seçin
+                                                </option>
+                                                <option value="analysis1">Qanın biokimyəvi müayinələri</option>
+                                                <option value="analysis2">Sidiyin biokimyəvi müayinələri</option>
+                                                <option value="analysis3">Hemostaz müayinələri</option>
+                                                <option value="analysis4">İnfeksiyaların təyini</option>
+                                                <option value="analysis5">İmmunoloji müayinələr</option>
+                                                <option value="analysis6">Bakterioloji müayinələr</option>
+                                                <option value="analysis7">Molekulyar-bioloji müayinələr-PZR müayinələr</option>
+                                                <option value="analysis8">Allerqoloji müayinələr</option>
+                                                <option value="analysis9">Onkomarker müayinələri</option>
+                                                <option value="analysis1 0">Genetik testlər</option>
+                                            </select>
+
+
+
+                                            <FileUploa />
+                                        </div>
+                                    </div>
+                                )}
                             </div>
-                        </div>
+
+
                         <div class="col-lg-4 col-md-6 col-sm-12 doctors-block">
                             <div class="doctors-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">

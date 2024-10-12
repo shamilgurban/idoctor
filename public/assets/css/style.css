@@ -168,7 +168,8 @@ p{
 
 h1,h2,h3,h4,h5,h6{
   position:relative;
-  font-family: 'Jost', sans-serif;
+  /* font-family: 'Jost', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #00224f;
   margin: 0px;

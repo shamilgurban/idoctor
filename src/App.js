@@ -9,6 +9,7 @@ import Layout from "./components/Layout/Layout";
 import Test from "./pages/Test";
 import Contact from "./pages/Contact"
 import Doctors from "./pages/Doctors";
+import FileUpload from "./FileUpload";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Doctors" element={<Doctors />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/FileUpload" element={<FileUpload />} />
         <Route path="/Test" element={<Test />} />
         <Route path="/" element={<Home />} />
       </Routes>

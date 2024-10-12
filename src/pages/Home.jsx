@@ -1,5 +1,7 @@
 import "../App.css";
 import { Link } from "react-router-dom";
+import FileUpload from "../FileUpload";
+import { useState } from "react";
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -9,6 +11,8 @@ const scrollToTop = () => {
 };
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <div class="boxed_wrapper">
       <div class="preloader"></div>
@@ -258,9 +262,9 @@ function App() {
                       </li>
                     </ul>
                     <div class="btn-box">
-                      <a href="doctors-1.html" class="theme-btn-one">
+                      <span onClick={() => setShowPopup(true)} class="theme-btn-one">
                         Faylı Yüklə<i class="icon-Arrow-Right"></i>
-                      </a>
+                      </span>
                     </div>
                     <div class="link">
                       <a href="doctors-1.html">
@@ -584,6 +588,8 @@ function App() {
       >
         <span className="fa fa-arrow-up" />
       </button>
+
+      {showPopup && <FileUpload setShowPopup={setShowPopup} />}
     </div>
   );
 }

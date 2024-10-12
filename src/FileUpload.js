@@ -1,69 +1,55 @@
-
 import React, { useState } from "react";
-import { useDropzone } from "react-dropzone";
 
-const FileUpload = () => {
-  const [files, setFiles] = useState([]);
-  const maxFileSize = 5 * 1024 * 1024;
+function FileUpload({ setShowPopup }) {
+  // State to manage popup visibility and the file upload
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const uploadFile = (file) => {
-    const formData = new FormData();
-    formData.append("file", file);
-
-  
-    fetch("http://localhost:3000/uploads", { // Server URL-i
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("File uploaded successfully:", data);
-        alert("Fayl uğurla yükləndi!");
-      })
-      .catch((error) => {
-        console.error("Error uploading file:", error);
-        alert("Fayl yüklənərkən xəta baş verdi.");
-      });
+  // Toggle the popup visibility
+  const togglePopup = () => {
+    console.log(setShowPopup)
+    setShowPopup(false);
   };
 
-  const onDrop = (acceptedFiles) => {
-    const filteredFiles = acceptedFiles.filter((file) => file.size <= maxFileSize);
-    if (filteredFiles.length !== acceptedFiles.length) {
-      alert("5 MB-dən böyük olan fayllar yüklənə bilməz!");
+  // Handle file input change
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  // Handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (selectedFile) {
+      console.log("File submitted:", selectedFile);
+      // You can handle the file upload here (e.g., send it to a server)
+      alert("File submitted successfully!");
+      setShowPopup(false); // Close the popup after submission
+    } else {
+      alert("Please select a file before submitting.");
     }
-    setFiles((prevFiles) => [...prevFiles, ...filteredFiles]);
-
-    
-    filteredFiles.forEach((file) => uploadFile(file));
   };
-
-  const { getRootProps, getInputProps } = useDropzone({
-    onDrop,
-    accept: {
-      "image/*": [".jpeg", ".jpg", ".png"],
-      "application/pdf": [".pdf"],
-    },
-  });
 
   return (
-    <div className="upload-container" >
-      <div {...getRootProps()} style={{ cursor: 'pointer' }}>
-        <input {...getInputProps()} />
-        <img src="upload-icon.png" style={{ width: '50px', marginBottom: '10px' , marginLeft: '35px'}} />
-        <p style={{color: '#fff'}}>Drag & Drop to Upload File</p>
-        <p style={{color: '#fff'}}>OR</p>
-      </div>
-      <button
-        onClick={() => document.querySelector('.upload-container input').click()}
-        style={{
-          backgroundColor: '#fff', color: '#4A90E2', border: 'none', padding: '10px 20px',
-          borderRadius: '4px', cursor: 'pointer'
-        }}
-      >
-        Browse File
-      </button>
-    </div>
+    <div className="popup-overlay">
+          <div className="popup-content">
+            <h2 className="upload-text">Upload Your File</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="file"
+                onChange={handleFileChange}
+                className="file-input"
+              />
+              <div className="button-group">
+                <button type="submit" className="submit-btn">
+                  Submit
+                </button>
+                <button type="button" className="close-btn" onClick={togglePopup}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
   );
-};
+}
 
 export default FileUpload;

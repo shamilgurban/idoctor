@@ -41,7 +41,7 @@ import './App.css';
                           </li>
                         
                           
-                          <li class="dropdown"><a href="About">Haqqımızda</a>
+                          <li><a href="About">Haqqımızda</a>
                                                           
                                         </li> 
                                         <li><a href="ContactUs">Əlaqə</a>
@@ -228,11 +228,14 @@ import './App.css';
                             <i className="far fa-clock" />
                           </div>
                         </div>
+                        <div className="total-box">
+                        <h5>Total<span>40 AZN</span></h5>
+                        </div>
                         <div className="choose-service">
                           
                           
                           <div className="btn-box">
-                            <a href="BookAppointment" className="theme-btn-one">Davam et<i className="icon-Arrow-Right" /></a>
+                            <a href="BookAppointment" className="theme-btn-one">Qəbul et<i className="icon-Arrow-Right" /></a>
                           </div>
                         </div>
                       </div>

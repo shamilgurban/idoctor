@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 
 function App() {
       return (
@@ -26,15 +26,14 @@ function App() {
                     <nav className="main-menu navbar-expand-md navbar-light">
                       <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                         <ul className="navigation clearfix">
-                          <li><a href="index.html">Ana Səhifə</a>
+                          <li><a href="/">Ana Səhifə</a>
                             
                           </li> 
                           <li><a href="index.html">Həkimlər</a>
                             
                           </li>
                           
-                          
-                          <li><a href="index.html">Haqqımızda</a> 
+                          <li><a href="index.html">Haqqımızda</a>
                                         </li> 
                                         <li><a href="index.html">Əlaqə</a>
                                         </li>  
@@ -51,7 +50,7 @@ function App() {
                       <figure className="author-image"><img src="assets/images/resource/author-1.png" alt="" /></figure>
                       <div className="select-box">
                         <select className="wide">
-                          <option data-display="Nurlan İbrahimov"></option>
+                          <option data-display="Dr. Nurlan İbrahimov"></option>
                           <option value={1}>Profil</option>
                           <option value={2}>Tənzimləmələr</option>
                           <option value={4}>Hesabdan çıxış</option>
@@ -76,7 +75,7 @@ function App() {
                   </div>
                   <div className="select-box">
                         <select className="wide">
-                          <option data-display="Nurlan İbrahimov"></option>
+                          <option data-display="Dr. Nurlan İbrahimov"></option>
                           <option value={1}>Profil</option>
                           <option value={2}>Tənzimləmələr</option>
                           <option value={4}>Hesabdan çıxış</option>
@@ -122,31 +121,30 @@ function App() {
               </div>
               <div className="auto-container">
                 <div className="title">
-                  <h1>Profil Tənzimləmələri</h1>
+                  <h1>Parolu Dəyiş</h1>
                 </div>
               </div>
             </div>
-            
           </section>
           {/*page-title-two end*/}
           {/* doctors-dashboard */}
           <section className="doctors-dashboard bg-color-3">
-            <div className="left-panel">
-              <div className="profile-box patient-profile">
-              <div className="upper-box">
-                  <figure className="profile-image"><img src="assets/images/resource/profile-1.png" alt="" /></figure>
+          <div className="left-panel">
+              <div className="profile-box">
+                <div className="upper-box">
+                  <figure className="profile-image"><img src="assets/images/resource/profile-2.png" alt="" /></figure>
                   <div className="title-box centred">
                     <div className="inner">
-                      <h3>Nurlan İbrahimov</h3>
-                      <p><i className="fas fa-calendar-alt" />9 Mart 1998,  26 Yaş</p>
+                      <h3>Dr. Nurlan İbrahimov</h3>
+                      <p>Kardioloq</p>
                     </div>
                   </div>
                 </div>
                 <div className="profile-info">
                   <ul className="list clearfix">
-                    <li><a href="patient-dashboard.html" ><i className="fas fa-columns" />Profil</a></li>
-                    <li><a href="change-password-2.html"><i className="fas fa-unlock-alt" />Parolu Dəyiş</a></li>
-                    <li><a href="login-2.html"><i className="fas fa-sign-out-alt" />Hesabdan çıxış</a></li>
+                    <li><a href="doctors-dashboard.html"><i className="fas fa-columns" />Profil</a></li>
+                    <li><a href="change-password.html" className="current"><i className="fas fa-unlock-alt" />Parolu Dəyiş</a></li>
+                    <li><a href="login.html"><i className="fas fa-sign-out-alt" />Hesabdan çıxış</a></li>
                   </ul>
                 </div>
               </div>
@@ -154,66 +152,38 @@ function App() {
             <div className="right-panel">
               <div className="content-container">
                 <div className="outer-container">
-                  <div className="add-listing my-profile">
+                  <div className="add-listing change-password">
                     <div className="single-box">
                       <div className="title-box">
-                        <h3>Məlumatlar</h3>
-                        <a href="add-listing.html" className="menu"><i className="icon-Dot-menu" /></a>
+                        <h3>Parolu Dəyiş</h3>
                       </div>
                       <div className="inner-box">
-                        <div className="profile-title">
-                          <figure className="image-box"><img src="assets/images/resource/profile-4.png" alt="" /></figure>
-                          <div className="upload-photo">
-                            <a href="my-profile.html"><i className="icon-Upload" />Şəkil Yüklə</a>
-                            <span>İcazə verilir JPG, GIF və ya PNG. Maksimum ölçüsü 2MB</span>
-                          </div>
-                        </div>
                         <form action="add-listing.html" method="post">
                           <div className="row clearfix">
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Ad</label>
-                              <input type="text" name="fname" placeholder="Adınızı daxil edin" required />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
+                              <label>Köhnə Parol</label>
+                              <input type="password" name="password1" required />
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Soyad</label>
-                              <input type="text" name="lname" placeholder="Soyadınızı daxil edin" required />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Email</label>
-                              <input type="email" name="email" placeholder="E-poçtunuzu daxil edin" required />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
+                              <label>Yeni Parol</label>
+                              <input type="password" name="password2" required />
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Doğum tarixi</label>
-                              <input type="text" name="birth_date"  required />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Cinsiniz</label>
-                              <input type="text" name="gender"  required />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
+                              <label>Yeni Parolu Təsdiqlə</label>
+                              <input type="password" name="password3" required />
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Telefon</label>
-                              <input type="text" name="phone"  required />
-                            </div>
-                            
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Qan qrupu</label>
-                              <input type="text" name="blood_group"  required />
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                              <label>Ailə vəziyyəti</label>
-                              <input type="text" name="marital_status"  required />
-                            </div>
-                            <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                              <label>Həkim üçün qeydlər (istəyə görə)</label>
-                              <textarea name="message" placeholder="Qeydinizi bura yazın..." defaultValue={""} />
+                            <div className="col-lg-6 col-md-12 col-sm-12 form-group">
                             </div>
                           </div>
                         </form>
                       </div>
                     </div>
-                    
                     <div className="btn-box">
-                      <a href="add-listing.html" className="theme-btn-one">Yadda saxla<i className="icon-Arrow-Right" /></a>
+                      <a href="add-listing.html" className="theme-btn-one">Yadda Saxla<i className="icon-Arrow-Right" /></a>
                       <a href="add-listing.html" className="cancel-btn">Geriyə</a>
                     </div>
                   </div>
@@ -248,6 +218,7 @@ function App() {
                                     <div class="widget-content">
                                         <ul class="links clearfix">
                                             <li><a href="index.html">Həkimlər</a></li>
+                                            <li><a href="index.html">Klinikalar</a></li>
                                             <li><a href="index.html">Yüklə</a></li>
                                             <li><a href="index.html">Gizlilik Şərtləri</a></li>
                                         </ul>
@@ -299,5 +270,5 @@ function App() {
         </div>
       );
     }
-    
+
     export default App;

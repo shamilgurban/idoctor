@@ -24,7 +24,7 @@ const Footer = () => {
                 <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                   <div class="footer-widget logo-widget">
                     <figure class="footer-logo">
-                      <a href="HomePage">
+                      <a href="/">
                         <img src={"../assets/images/footer-logo.png"} alt="" />
                       </a>
                     </figure>
@@ -42,11 +42,11 @@ const Footer = () => {
                     <div class="widget-content">
                       <ul class="links clearfix">
                         <li>
-                          <a href="DoctorList">Həkimlər</a>
+                          <a href="/Doctors">Həkimlər</a>
                         </li>
 
                         <li>
-                          <a href="Download">Yüklə</a>
+                          <a href="/Download">Yüklə</a>
                         </li>
                         <li>
                           <a href="index.html">Gizlilik Şərtləri</a>

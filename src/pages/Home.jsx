@@ -1,5 +1,4 @@
 import "../App.css";
-import { Link } from "react-router-dom";
 import FileUpload from "../FileUpload";
 import { useState } from "react";
 
@@ -42,39 +41,10 @@ function App() {
               </li>
             </ul>
           </div>
-          <div class="social-links">
-            <ul class="clearfix">
-              <li>
-                <a href="index.html">
-                  <span class="fab fa-twitter"></span>
-                </a>
-              </li>
-              <li>
-                <a href="index.html">
-                  <span class="fab fa-facebook-square"></span>
-                </a>
-              </li>
-              <li>
-                <a href="index.html">
-                  <span class="fab fa-pinterest-p"></span>
-                </a>
-              </li>
-              <li>
-                <a href="index.html">
-                  <span class="fab fa-instagram"></span>
-                </a>
-              </li>
-              <li>
-                <a href="index.html">
-                  <span class="fab fa-youtube"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
         </nav>
       </div>
 
-      <section class="banner-section style-two bg-color-1">
+      <section class="banner-section style-one bg-color-1">
         <div
           class="bg-layer"
           style={{
@@ -111,50 +81,10 @@ function App() {
           <div class="row clearfix">
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">
               <div class="content-box">
+              <div style={{ marginBottom: "120px" }}></div>
                 <h1>Sizə Uyğun Həkim.</h1>
                 <p>Sağlamlığa gedən yolu bizimlə dəyərləndir</p>
-                <div class="form-inner">
-                  <form action="index.html" method="post">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Ad, İxtisas və.s"
-                        required=""
-                      ></input>
-                      <button type="submit">
-                        <i class="icon-Arrow-Right"></i>
-                      </button>
-                    </div>
-                  </form>
-                  <ul class="select-box clearfix">
-                    <li></li>
-                    <li>
-                      <div class="single-checkbox">
-                        <input
-                          type="radio"
-                          name="check-box"
-                          id="check2"
-                        ></input>
-                        <label for="check2">
-                          <span></span>Həkim
-                        </label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="single-checkbox">
-                        <input
-                          type="radio"
-                          name="check-box"
-                          id="check3"
-                        ></input>
-                        <label for="check3">
-                          <span></span>Klinika
-                        </label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                
               </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 image-column">
@@ -169,164 +99,6 @@ function App() {
                     alt=""
                   />
                 </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="search-doctors-two">
-        <div class="auto-container">
-          <div class="inner-container">
-            <div class="row clearfix">
-              <div class="col-lg-4 col-md-6 col-sm-12 doctors-block">
-                <div
-                  class="doctors-block-one wow fadeInUp animated animated"
-                  data-wow-delay="00ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div class="inner-box">
-                    <div
-                      class="pattern"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-26.png')`,
-                      }}
-                    ></div>
-                    <div
-                      class="pattern-2"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-36.png')`,
-                      }}
-                    ></div>
-                    <h3>
-                      <br />
-                      İxtisas üzrə
-                    </h3>
-                    <ul class="doctors-list clearfix">
-                      <li>
-                        <a href="doctors-profile.html">Kardiologiya</a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">Dermatologiya</a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">
-                          Mamalıq və Ginekologiya
-                        </a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">Onkologiya</a>
-                      </li>
-                    </ul>
-                    <div className="btn-box">
-                      <a href="doctors-1.html" className="theme-btn-one text-nowrap">
-                        Hamısına bax<i class="icon-Arrow-Right"></i>
-                      </a>
-                    </div>
-                    <div class="link">
-                      <a href="doctors-1.html">
-                        <i class="icon-Arrow-Right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 doctors-block">
-                <div
-                  class="doctors-block-one wow fadeInUp animated animated"
-                  data-wow-delay="300ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div class="inner-box">
-                    <div
-                      class="pattern"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-26.png')`,
-                      }}
-                    ></div>
-                    <div
-                      class="pattern-2"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-36.png')`,
-                      }}
-                    ></div>
-                    <h3>
-                      <br />
-                      Analiz yoxlanışı
-                    </h3>
-                    <ul class="doctors-list clearfix">
-                      <li>
-                        <a href="doctors-profile.html">
-                          Peşəkar həkimlər tərəfindən analizin yoxlanışı
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="btn-box">
-                      <span onClick={() => setShowPopup(true)} class="theme-btn-one">
-                        Faylı Yüklə<i class="icon-Arrow-Right"></i>
-                      </span>
-                    </div>
-                    <div class="link">
-                      <a href="doctors-1.html">
-                        <i class="icon-Arrow-Right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 doctors-block">
-                <div
-                  class="doctors-block-one wow fadeInUp animated animated"
-                  data-wow-delay="600ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div class="inner-box">
-                    <div
-                      class="pattern"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-26.png')`,
-                      }}
-                    ></div>
-                    <div
-                      class="pattern-2"
-                      style={{
-                        backgroundImage: `url('../assets/images/shape/shape-36.png')`,
-                      }}
-                    ></div>
-                    <h3>
-                      <br />
-                      Klinika üzrə
-                    </h3>
-                    <ul class="doctors-list clearfix">
-                      <li>
-                        <a href="doctors-profile.html">MedServis</a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">EGE Hospital</a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">
-                          Mərkəzi Gömrük Hospitalı
-                        </a>
-                      </li>
-                      <li>
-                        <a href="doctors-profile.html">
-                          Nəsrəddin Tusi adına Klinika
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="btn-box">
-                      <a href="doctors-1.html" className="theme-btn-one text-nowrap">
-                        Hamısına bax<i className="icon-Arrow-Right"></i>
-                      </a>
-                    </div>
-                    <div class="link">
-                      <a href="doctors-1.html">
-                        <i class="icon-Arrow-Right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -374,16 +146,16 @@ function App() {
               <div class="content_block_1">
                 <div class="content-box">
                   <div class="sec-title">
-                    <p>iDoctor Haqqında</p>
+                    <h6>iDoktor Haqqında</h6>
                     <h2>Bir toxunuşla yanınızda</h2>
                   </div>
                   <div class="text">
                     <p>
-                      iDoctor, online həkim qəbulu üçün yaradılmış platformadır.
+                      iDoktor, online həkim qəbulu üçün yaradılmış platformadır.
                     </p>
                   </div>
                   <div class="btn-box">
-                    <a href="about.html" class="theme-btn-one">
+                    <a href="/About" class="theme-btn-one">
                       Haqqımızda<i class="icon-Arrow-Right"></i>
                     </a>
                   </div>

@@ -31,7 +31,7 @@ function App() {
                             
                           </li>
                           
-                          <li class="dropdown"><a href="About">Haqqımızda</a>
+                          <li><a href="About">Haqqımızda</a>
                                                         
                                         </li> 
                                         <li><a href="ContactUs">Əlaqə</a>
@@ -142,11 +142,6 @@ function App() {
                     <div className="profile-info">
                   <ul className="list clearfix">
                     <li><a href="doctors-dashboard.html" className="current"><i className="fas fa-columns" />Profil</a></li>
-                    <li><a href="appointment.html"><i className="fas fa-calendar-alt" />Qəbul Siyahısı</a></li>
-                    <li><a href="my-patients.html"><i className="fas fa-wheelchair" />Pasiyentlərim</a></li>
-                    
-                    <li><a href="schedule-timing.html"><i className="fas fa-clock" />Qəbul Cədvəli</a></li>
-                    <li><a href="review.html"><i className="fas fa-star" />Rəylər</a></li>
                     <li><a href="my-profile.html"><i className="fas fa-user" />Profil Tənzimləmələri</a></li>
                     <li><a href="change-password.html"><i className="fas fa-unlock-alt" />Parolu Dəyiş</a></li>
                     <li><a href="login.html"><i className="fas fa-sign-out-alt" />Hesabdan çıxış</a></li>
@@ -203,9 +198,6 @@ function App() {
                                                 <th>Ad</th>
                                                 <th>Qəbul vaxtı</th>
                                                 <th>Yoxlanış</th>
-                                                <th>Məbləğ</th>
-                                                <th>&nbsp;</th>
-                                                <th>&nbsp;</th>
                                             </tr>    
                                         </thead>
                                         <tbody>
@@ -224,9 +216,7 @@ function App() {
                                                 <td>
                                                     <p>Ümumi</p>
                                                 </td>
-                                                <td>
-                                                    <p>50 AZN</p>
-                                                </td>
+                                               
                                                 <td>
                                                     <a href="patient-dashboard.html" class="accept"><i class="fas fa-check"></i>Qəbul et</a>
                                                 </td>
@@ -249,9 +239,7 @@ function App() {
                                                 <td>
                                                     <p>Ümumi</p>
                                                 </td>
-                                                <td>
-                                                    <p>50 AZN</p>
-                                                </td>
+                                                
                                                 <td>
                                                     <a href="patient-dashboard.html" class="accept"><i class="fas fa-check"></i>Qəbul et</a>
                                                 </td>
@@ -274,9 +262,7 @@ function App() {
                                                 <td>
                                                     <p>Ümumi</p>
                                                 </td>
-                                                <td>
-                                                    <p>50 AZN</p>
-                                                </td>
+                                                
                                                 <td>
                                                     <a href="patient-dashboard.html" class="accept"><i class="fas fa-check"></i>Qəbul et</a>
                                                 </td>
@@ -299,9 +285,7 @@ function App() {
                                                 <td>
                                                     <p>Ümumi</p>
                                                 </td>
-                                                <td>
-                                                    <p>50 AZN</p>
-                                                </td>
+                                              
                                                 <td>
                                                     <a href="patient-dashboard.html" class="accept"><i class="fas fa-check"></i>Qəbul et</a>
                                                 </td>

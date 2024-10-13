@@ -33,11 +33,7 @@ function App() {
                             
                           </li>
                           
-                          <li class="dropdown"><a href="index.html">Haqqımızda</a>
-                                                        <ul>
-                                                            <li><a href="team-element-2.html">Yükləmələr</a></li>
-                                                            <li><a href="news-element-1.html">FAQ</a></li>
-                                                        </ul>     
+                          <li><a href="index.html">Haqqımızda</a>
                                         </li> 
                                         <li><a href="index.html">Əlaqə</a>
                                         </li>  
@@ -147,11 +143,6 @@ function App() {
                 <div className="profile-info">
                   <ul className="list clearfix">
                     <li><a href="doctors-dashboard.html"><i className="fas fa-columns" />Profil</a></li>
-                    <li><a href="appointment.html" ><i className="fas fa-calendar-alt" />Qəbul Siyahısı</a></li>
-                    <li><a href="my-patients.html"><i className="fas fa-wheelchair" />Pasiyentlərim</a></li>
-                    
-                    <li><a href="schedule-timing.html"><i className="fas fa-clock" />Qəbul Cədvəli</a></li>
-                    <li><a href="review.html"><i className="fas fa-star" />Rəylər</a></li>
                     
                     <li><a href="my-profile.html"><i className="fas fa-user" />Profil Tənzimləmələri</a></li>
                     <li><a href="change-password.html" className="current"><i className="fas fa-unlock-alt" />Parolu Dəyiş</a></li>

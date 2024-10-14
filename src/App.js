@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import RegisterDoc from "./pages/RegisterforDoc";
 import About from "./pages/About";
-import Login from "./Login";
+import Login from "./pages/Login";
 import Layout from "./components/Layout/Layout";
 import Test from "./pages/Test";
 import Contact from "./pages/Contact"

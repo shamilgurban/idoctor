@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
-import axiosInstance from "./axiosConfig";
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+import "../App.css";
+import axiosInstance from "../axiosConfig";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -126,11 +122,7 @@ function Login() {
                         required
                       />
                     </div>
-                    <div className="col-lg-12 form-group">
-                      <div className="forgot-password clearfix">
-                        <a href="/forgotpass">Şifrəmi unutdum?</a>
-                      </div>
-                    </div>
+                    <div style={{ marginBottom: "120px" }}></div>
                     <div className="col-lg-12 form-group message-btn">
                       <button
                         type="submit"

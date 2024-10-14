@@ -102,8 +102,7 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text not-available">Uyğun deyil</span>
-                                  <a href="DoctorDetails">Detallara bax</a>
+                                  <a href="DoctorDetails">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -137,8 +136,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -172,8 +171,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -207,8 +206,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -242,8 +241,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text not-available">Uyğun deyil</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                 
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -277,8 +276,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text not-available">Uyğun deyil</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -312,8 +311,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                 
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -347,8 +346,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>
@@ -382,8 +381,8 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <span className="text">Online</span>
-                                  <a href="doctors-details.html">Detallara Bax</a>
+                                  
+                                  <a href="doctors-details.html">Davam et</a>
                                 </div>
                               </div>
                             </div>

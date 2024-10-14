@@ -92,12 +92,12 @@ function App() {
               <div className="content_block_1">
                 <div className="content-box mr-50">
                   <div className="sec-title">
-                    <p>iDoctor Haqqında</p>
+                    <p>iDoktor Haqqında</p>
                     <h2>Bir toxunuşla yanınızda</h2>
                   </div>
                   <div class="text">
                     <p>
-                      iDoctor, online həkim qəbulu üçün yaradılmış platformadır.
+                      iDoktor, online həkim qəbulu üçün yaradılmış platformadır.
                     </p>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ function App() {
                       <div className="acc-content current">
                         <div className="text">
                           <p>
-                            Xeyr. iDoctor platforması tamamilə şəffaf şəkildə
+                            Xeyr. iDoktor platforması tamamilə şəffaf şəkildə
                             işləyir. Bu cür halların baş verilməsinə imkan
                             verilmir.
                           </p>

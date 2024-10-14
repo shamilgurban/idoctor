@@ -102,14 +102,6 @@ const Header = () => {
                     <a href="/login">Daxil ol</a>
                   )}
                 </li>
-                <li className="language">
-                  <a href="#">AZ</a>
-                  <ul className="language-dropdown">
-                    <li><a href="#">Azərbaycanca</a></li>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Русский</a></li>
-                  </ul>
-                </li>
               </ul>
             </div>
           </div>

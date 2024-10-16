@@ -25,7 +25,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/FileUpload" element={<FileUpload />} />
         <Route path="/Test" element={<Test />} />
-        <Route path="/DoctorDetails/:id" element={<DoctorDetails />} />
+        <Route path="/DoctorDetails" element={<DoctorDetails />} />
       </Routes>
     </Layout>
   );

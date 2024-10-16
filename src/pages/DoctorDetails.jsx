@@ -1,6 +1,6 @@
 import '../App.css';
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 const scrollToTop = () => {
@@ -11,23 +11,26 @@ const scrollToTop = () => {
 };
 
 function App() {
-    const { id } = useParams();
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
+
     const [doctor, setDoctor] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchDoctorDetails = async () => {
+            console.log(id)
             try {
                 const response = await axios.get(
-                    "http://localhost:8080/api/Doctors/GetAllDoctors"
+                    `http://localhost:8080/api/Doctors/GetDoctorById/${id}`
                 );
-                const doctors = response.data;
+                
+                const doctor = response.data;
 
-                const foundDoctor = doctors.find((doc) => doc.id === parseInt(id));
-                setDoctor(foundDoctor);
+                setDoctor(doctor);
 
-                if (!foundDoctor) {
+                if (!doctor) {
                     setError("No doctor found with the provided ID.");
                 }
             } catch (error) {
@@ -57,7 +60,6 @@ function App() {
     return (
         <div className="boxed_wrapper">
             {/* Preloader */}
-            <div className="preloader" />
             {/* Mobile Menu */}
             <div className="mobile-menu">
                 {/* Mobile Menu Code... */}

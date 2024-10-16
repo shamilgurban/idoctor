@@ -93,7 +93,7 @@ function Doctors() {
                                   <p><i className="fas fa-map-marker-alt" /> Bakı, Azərbaycan</p>
                                 </div>
                                 <div className="lower-box clearfix">
-                                  <a href={`/DoctorDetails/${doctor.id}`} className="btn">Davam et</a>
+                                  <a href={`/DoctorDetails?id=${doctor.id}`} className="btn">Davam et</a>
                                 </div>
                               </div>
                             </div>

@@ -133,7 +133,9 @@ function App() {
                     <img src={"../assets/images/resource/about-2.jpg"} alt="" />
                   </figure>
                   <div class="image-content">
+                    
                     <figure class="icon-box">
+                      
                       <img src={"../assets/images/icons/icon-8.png"} alt="" />
                     </figure>
                     <span>Mütəxəssis ilə</span>
@@ -210,6 +212,7 @@ function App() {
                 <div class="processing-block-two">
                   <div class="inner-box">
                     <figure class="icon-box">
+                    <div style={{ marginBottom: "50px" }}></div>
                       <img src={"../assets/images/icons/icon-9.png"} alt="" />
                     </figure>
                     <h3>Sizə uyğun həkimi axtarın</h3>
@@ -220,6 +223,7 @@ function App() {
                 <div class="processing-block-two">
                   <div class="inner-box">
                     <figure class="icon-box">
+                    <div style={{ marginBottom: "50px" }}></div>
                       <img src={"../assets/images/icons/icon-10.png"} alt="" />
                     </figure>
                     <h3>Profil detallarına baxın</h3>
@@ -229,7 +233,8 @@ function App() {
               <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
                 <div class="processing-block-two">
                   <div class="inner-box">
-                    <figure class="icon-box">
+                    <figure class="icon-box">\
+                      
                       <img src={"../assets/images/icons/icon-11.png"} alt="" />
                     </figure>
                     <h3>Qəbul vaxtını təyin edin</h3>

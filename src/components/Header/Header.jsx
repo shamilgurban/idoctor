@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axiosInstance from '../../axiosConfig';
 import './Header.css'; 
 
 const Header = () => {
-  const navigate = useNavigate();
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const submenuRef = useRef(null);
@@ -28,8 +27,9 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('email');
+    localStorage.setItem('patientId', ''); // Set patientId to empty
     setUser(null);
-    navigate('/');
+    // Use href for logout instead of navigate
   };
 
   const toggleSubmenu = () => {
@@ -68,7 +68,12 @@ const Header = () => {
             </Link>
           </div>
           <div className="dropdown-divider m-0"></div>
-          <a href="#" className="list-group-item border-0 list-group-item-action text-danger" onClick={() => { handleLogout(); closeSubmenu(); }}>
+          {/* Use href to navigate on logout */}
+          <a 
+            href="/" 
+            className="list-group-item border-0 list-group-item-action text-danger" 
+            onClick={() => { handleLogout(); closeSubmenu(); }}
+          >
             <i className="fas fa-power-off mr-3"></i>Çıxış
           </a>
         </div>
@@ -114,7 +119,7 @@ const Header = () => {
             <div className="logo-box">
               <figure className="logo">
                 <a href="/">
-                  <img src="./assets/images/logo-3.png" alt="Logo" />
+                  <img src="/assets/images/logo-3.png" alt="Logo" />
                 </a>
               </figure>
             </div>
@@ -122,10 +127,10 @@ const Header = () => {
               <nav className="main-menu navbar-expand-md navbar-light">
                 <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul className="navigation clearfix">
-                    <li className={window.location.pathname == "/" ? "current": ""}><a href="/">Ana Səhifə</a></li>
-                    <li className={window.location.pathname == "/Doctors" ? "current": ""}><a href="/Doctors">Həkimlər</a></li>
-                    <li className={window.location.pathname == "/About" ? "current": ""}><a  href="/About">Haqqımızda</a></li>
-                    <li className={window.location.pathname == "/Contact" ? "current": ""}><a href="/Contact">Əlaqə</a></li>
+                    <li className={window.location.pathname === "/" ? "current": ""}><a href="/">Ana Səhifə</a></li>
+                    <li className={window.location.pathname === "/Doctors" ? "current": ""}><a href="/Doctors">Həkimlər</a></li>
+                    <li className={window.location.pathname === "/About" ? "current": ""}><a href="/About">Haqqımızda</a></li>
+                    <li className={window.location.pathname === "/Contact" ? "current": ""}><a href="/Contact">Əlaqə</a></li>
                   </ul>
                 </div>
               </nav>

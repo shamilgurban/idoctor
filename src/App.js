@@ -25,7 +25,8 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/FileUpload" element={<FileUpload />} />
         <Route path="/Test" element={<Test />} />
-        <Route path="/DoctorDetails" element={<DoctorDetails />} />
+        {/* Update this route to accept an ID */}
+        <Route path="/DoctorDetails/:id" element={<DoctorDetails />} />
       </Routes>
     </Layout>
   );

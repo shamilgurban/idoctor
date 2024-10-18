@@ -93,13 +93,13 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .open-popup-btn:hover {
+.open-popup-btn:hover {
     background-color: #3700b3;
-  }
+}
 
-  .popup-overlay {
+.popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -111,18 +111,18 @@
     align-items: center;
     animation: fadeIn 0.3s ease;
     z-index: 1000;
-  }
+}
 
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  .popup-content {
+.popup-content {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
@@ -130,31 +130,31 @@
     max-width: 400px;
     width: 100%;
     text-align: center;
-  }
+}
 
-  .upload-text {
+.upload-text {
     margin-bottom: 20px;
     font-family: "Arial", sans-serif;
     font-size: 24px;
     color: #333;
-  }
+}
 
-  .file-input {
+.file-input {
     padding: 10px;
     margin: 15px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
-  }
+}
 
-  .button-group {
+.button-group {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .submit-btn {
+.submit-btn {
     padding: 10px 20px;
     background-color: #6200ea;
     color: white;
@@ -163,13 +163,13 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .submit-btn:hover {
+.submit-btn:hover {
     background-color: #3700b3;
-  }
+}
 
-  .close-btn {
+.close-btn {
     padding: 10px 20px;
     background-color: #ff4081;
     color: white;
@@ -178,8 +178,172 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .close-btn:hover {
+.close-btn:hover {
     background-color: #c60055;
-  }
+}
+
+
+/*  */
+
+
+/* Doctors Sidebar Aesthetic */
+
+
+/* .form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+
+.doctors-sidebar {
+    background-color: #f9f9f9;
+    /* Subtle light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 400px;
+}
+
+.doctors-sidebar .form-title h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.doctors-sidebar .form-widget .form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.doctors-sidebar .form-widget .form-group input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.doctors-sidebar .form-widget .form-group input:focus {
+    outline: none;
+    border-color: #1abc9c;
+    /* Highlight input field */
+}
+
+.doctors-sidebar .form-group i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1abc9c;
+}
+
+.doctors-sidebar .total-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.doctors-sidebar .total-box p {
+    font-size: 18px;
+    color: #555;
+}
+
+.form-group button {
+    background-color: #1abc9c;
+}
+
+.like-box {
+    display: flex;
+    align-items: center;
+}
+
+
+/* General Styles */
+
+.appointment-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form Elements */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="file"] {
+    border: none;
+    /* Removing border for file input */
+}
+
+
+/* Button Styles */
+
+.theme-btn {
+    background-color: #1abc9c;
+    /* Button color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+
+/* Toast Notifications */
+
+.toastify {
+    background-color: #f44336;
+    /* Error color */
+}
+
+.toastify-success {
+    background-color: #4caf50;
+    /* Success color */
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .doctor-details {
+        padding: 20px;
+    }
+}
+
+.widget-title {
+    background-color: #453f85;
+    color: white;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.widget-title h3 {
+    color: white;
+}

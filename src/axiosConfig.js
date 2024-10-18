@@ -1,10 +1,24 @@
 import axios from 'axios';
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:8080/api', 
 });
+
+// Add a request interceptor
+axiosInstance.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`; // Attach token
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 axiosInstance.login = async (email, password) => {
   try {

@@ -21,56 +21,81 @@ function Login() {
 
     try {
       const response = await axiosInstance.post("/Auth/Login", { email, password });
+      console.log("Login response:", response.data); 
 
       if (response.data?.token) {
         const token = response.data.token;
         localStorage.setItem("token", token);
         localStorage.setItem("email", email);
 
-        const user = await fetchUser(email);
-
-        if (user && user.types === 2) {
-          const doctor = await fetchDoctor(email);
-          if (doctor && !doctor.isVerified) {
-            toast.error("Hesab təsdiqlənməyi gözləyir.");
-            return;
-          }
+        const userId = response.data.userId; 
+        if (userId) {
+          localStorage.setItem("userId", userId);
+          console.log("User ID stored:", userId); 
+        } else {
+          console.warn("User ID not found in response.");
         }
 
-        toast.success("Uğurla daxil oldunuz!");
-        window.location.href = "/";
+        axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+        await fetchPatientId(email);
+        const isVerified = await checkUserAndDoctor(email);
+        if (isVerified) {
+          toast.success("Uğurla daxil oldunuz!");
+          window.location.href = "/";
+        }
       } else {
         toast.error("Email və ya şifrə səhvdir.");
       }
     } catch (error) {
-      handleLoginError(email);
+      console.error("Login error:", error.response ? error.response.data : error.message);
+      if (error.response && error.response.status === 403) {
+        toast.error("Giriş icazəniz yoxdur. Xahiş edirik administrator ilə əlaqə saxlayın.");
+      } else {
+        toast.error("Xəta baş verdi. Yenidən cəhd edin.");
+      }
     } finally {
       setLoading(false);
     }
   };
 
-  const fetchUser = async (email) => {
-    const response = await axiosInstance.get("http://localhost:8080/api/Auth/GetAllUsers");
-    return response.data.find(user => user.email === email);
-  };
+  const fetchPatientId = async (email) => {
+    try {
+      const response = await axiosInstance.get("http://localhost:8080/api/Patients/GetAllPatients");
+      const patients = response.data;
+      const patient = patients.find((patient) => patient.email === email);
 
-  const fetchDoctor = async (email) => {
-    const response = await axiosInstance.get("http://localhost:8080/api/Doctors/GetAllDoctors");
-    return response.data.find(doc => doc.email === email);
-  };
-
-  const handleLoginError = async (email) => {
-    const user = await fetchUser(email);
-
-    if (user) {
-      const doctor = await fetchDoctor(email);
-      if (doctor && !doctor.isVerified) {
-        toast.error("Hesab təsdiqlənməyi gözləyir.");
+      if (patient) {
+        localStorage.setItem("patientId", patient.id); 
+        console.log("Patient ID stored:", patient.id); 
       } else {
-        toast.error("Email və ya şifrə səhvdir.");
+        console.warn("Patient not found for the email:", email);
       }
-    } else {
-      toast.error("Email və ya şifrə səhvdir.");
+    } catch (error) {
+      console.error("Error fetching patients:", error.response ? error.response.data : error.message);
+      toast.error("Xəta baş verdi. Yenidən cəhd edin.");
+    }
+  };
+
+  const checkUserAndDoctor = async (email) => {
+    try {
+      const userResponse = await axiosInstance.get("/Auth/GetAllUsers");
+      const user = userResponse.data.find((user) => user.email === email);
+
+      if (user && user.types === 2) {
+        const doctorResponse = await axiosInstance.get("/Doctors/GetAllDoctors");
+        const doctor = doctorResponse.data.find((doc) => doc.email === email);
+
+        if (doctor && !doctor.isVerified) {
+          toast.error("Hesab təsdiqlənməyi gözləyir.");
+          return false;
+        }
+      }
+      return true; 
+    } catch (error) {
+      console.error("Error fetching user/doctor data:", error.response ? error.response.data : error.message);
+      toast.error("Xəta baş verdi. Yenidən cəhd edin.");
+      return false;
     }
   };
 

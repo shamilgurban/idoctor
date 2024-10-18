@@ -1,4 +1,5 @@
 import '../App.css'; 
+import '../Doctor.css'
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"; 
 import axios from "axios"; 
@@ -204,7 +205,7 @@ function DoctorDetails() {
                                 </div>
                                 <div className="appointment-form">
                                     <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
-                                        <div className="form-group">
+                                        <div className="form-group app-form">
                                             <label htmlFor="analyses">Seçin Analiz:</label>
                                             <select
                                                 id="analyses"
@@ -220,11 +221,11 @@ function DoctorDetails() {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group app-form">
                                             <label htmlFor="date">Tarix seçin:</label>
                                             <input type="date" name="date" required />
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group app-form">
                                             <label htmlFor="time">Vaxt seçin:</label>
                                             <select
                                                 id="time"
@@ -244,11 +245,11 @@ function DoctorDetails() {
                                                 <option value="17:00">17:00</option>
                                             </select>
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group app-form">
                                             <label htmlFor="file">Fayl yükləyin:</label>
                                             <input type="file" name="file" onChange={handleFileChange} required />
                                         </div>
-                                           <div className="form-group">
+                                           <div className="form-group app-form">
                                             <p>Qiymət: 40 AZN</p>
                                         </div>
                                         <button type="submit" className="theme-btn">Təqdim et</button>

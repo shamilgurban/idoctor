@@ -71,7 +71,7 @@ function DoctorDetails() {
 
 
     if (!patientId) {
-         toast.error("Gorus teyin etmek ucun hesabınıza girls etməlisiniz.");
+         toast.error("Görüş təyin etmək üçün hesabınıza giriş etməlisiniz.");
         return; 
     }
 

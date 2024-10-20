@@ -106,7 +106,7 @@ function Doctors() {
                                 <p><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</p>
                               </div>
                               <div className="lower-box clearfix">
-                                <a href={`/DoctorDetails/${doctor.id}`}>Davam et</a> 
+                                <a href={localStorage.getItem('doctorId') > 0 ? `/DoctorDash` : `/DoctorDetails/${doctor.id}`}>Davam et</a> 
                               </div>
                             </div>
                           </div>

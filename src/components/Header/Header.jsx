@@ -28,6 +28,7 @@ const Header = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('email');
     localStorage.setItem('patientId', ''); // Set patientId to empty
+    localStorage.setItem('doctorId', ''); // Set patientId to empty
     setUser(null);
     // Use href for logout instead of navigate
   };

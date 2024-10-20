@@ -13,13 +13,18 @@ function App() {
     const [response, setResponse] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/Appointments/GetAllAppointments')
+        getPendingAppointments();
+    }, []);
+
+    const getPendingAppointments = () => {
+        const doctorId = localStorage.getItem('doctorId')
+        axios.get(`http://localhost:8080/api/Appointments/GetDoctorsPendingAppointmentsById/${doctorId}`)
             .then(res => {
                 console.log(res); // Backend-dən gələn məlumatı yoxlayın
                 setAppointments(res.data);
             })
             .catch(err => console.error(err));
-    }, []);
+    }
 
 
 
@@ -52,6 +57,7 @@ function App() {
             setIsAccepted(true);
             alert('Cavab göndərildi və qəbul edildi!');
             setIsPopupOpen(false);
+            getPendingAppointments();
         } catch (error) {
             console.error("Error accepting appointment", error);
             alert("Xəta baş verdi, cavab göndərilə bilmədi.");
@@ -63,9 +69,10 @@ function App() {
     const declineAppointment = async (id) => {
         try {
             console.log("Sending decline request for appointment ID:", id);
-            await axios.post('/api/declineAppointment', { appointmentId: id });
+            await axios.put(`http://localhost:8080/api/Appointments/declineAppointment/${id}`);
             // Handle appointment decline
             alert('İmtina edildi!');
+            getPendingAppointments();
         } catch (error) {
             console.error("Error declining appointment", error);
             alert("Xəta baş verdi, imtina edilə bilmədi.");

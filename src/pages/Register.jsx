@@ -203,19 +203,19 @@ function Register() {
                     <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                       <div className="custom-check-box">
                         <div className="custom-controls-stacked">
-                          <label className="custom-control material-checkbox">
+                          <label className="custom-control material-checkbox d-flex">
                             <input
-                              type="checkbox"
-                              name="termsAccepted"
-                              checked={formData.termsAccepted}
-                              onChange={handleChange}
-                              required
-                            />
+                            type="checkbox"
+                            name="termsAccepted"
+                            checked={formData.termsAccepted}
+                            onChange={handleChange}
+                            required/>
                             <span className="description">
                               Mən <a href="/terms">şərtləri</a> və <a href="/policy">ümumi siyasəti</a> qəbul edirəm
                             </span>
                           </label>
                         </div>
+
                         {errors.termsAccepted && <span className="error">{errors.termsAccepted}</span>}
                       </div>
                     </div>

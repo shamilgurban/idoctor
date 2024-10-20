@@ -306,7 +306,7 @@ function App() {
                                                     <tr className="name-box" key={appointment.id}>
                                                         <td>{appointment.patientFullName}</td>
                                                         <td>{new Date(appointment.appointmentDate).toLocaleDateString()}</td>
-                                                        <td>{appointment.analysisName}</td>
+                                                        <td><a target='_blank' href={`http://localhost:8080/${appointment.analysisDocumentPath}`}>{appointment.analysisName}</a></td>
 
 
                                                         <td>

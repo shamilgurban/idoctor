@@ -7109,7 +7109,7 @@ div#mCSB_1_container{
 }
 
 .doctors-appointment .doctors-table {
-  min-width: 1170px;
+  min-width: 1070px;
   width: 100%;
 }
 
@@ -7120,6 +7120,8 @@ div#mCSB_1_container{
 
 .doctors-appointment .doctors-table tr{
   border-top: 1px solid #e5eded;
+  
+  
 }
 
 .doctors-appointment .doctors-table .table-header th{
@@ -8555,11 +8557,9 @@ div#mCSB_1_container{
   display: inline-block;
   font-size: 15px;
   font-weight: 500;
-  line-height: 20px;
   padding: 9px 20px;
   background: #ebfaf8;
   border-radius: 25px;
-  float: right;
   margin-right: 10px;
 }
 
@@ -8572,7 +8572,7 @@ div#mCSB_1_container{
   padding: 9px 21.5px;
   background: #ffeeec;
   border-radius: 25px;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .doctors-appointment .doctors-table tr td .accept i{
@@ -10313,3 +10313,100 @@ div#mCSB_1_container{
   display: block;
   padding: 30px 30px;
 }
+
+
+/* pop-up doctor-dashboard */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.popup-content button {
+  margin: 5px;
+}
+
+.close-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+
+/* Popup düymələri */
+.popup-content button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Göndər düyməsi üçün stil */
+.popup-content button:first-of-type {
+  color: #39cabb;
+  position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 9px 20px;
+    background: #ebfaf9;
+    border-radius: 25px;
+
+}
+
+.popup-content button:first-of-type:hover {
+  background-color: #39cabb;
+  color: #fff; /* Hover zamanı daha tünd yaşıl */
+}
+
+/* Bağla düyməsi üçün stil */
+.popup-content .close-btn {
+  color: #fe5948;
+  position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 9px 20px;
+    background: #ebfaf8;
+    border-radius: 25px;
+
+}
+
+.popup-content .close-btn:hover {
+  background-color: #d32f2f;
+  color: #fff; /* Hover zamanı daha tünd qırmızı */
+}
+
+
+
+

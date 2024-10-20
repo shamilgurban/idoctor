@@ -81,10 +81,11 @@ function Login() {
     try {
       const userResponse = await axiosInstance.get("/Auth/GetAllUsers");
       const user = userResponse.data.find((user) => user.email === email);
-
-      if (user && user.types === 2) {
+      if (user && user.type === 'Doctor') {
+        console.log('here')
         const doctorResponse = await axiosInstance.get("/Doctors/GetAllDoctors");
         const doctor = doctorResponse.data.find((doc) => doc.email === email);
+        localStorage.setItem('doctorId', doctor.id)
 
         if (doctor && !doctor.isVerified) {
           toast.error("Hesab təsdiqlənməyi gözləyir.");

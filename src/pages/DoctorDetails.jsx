@@ -64,7 +64,7 @@ function DoctorDetails() {
 
     const handleSubmit = async () => {
     const patientId = localStorage.getItem('patientId'); 
-    const doctorId = doctor?.id; 
+    const doctorId = doctor?.id;
     const appointmentDate = document.querySelector('input[name="date"]').value; 
 
     const combinedAppointmentDate = `${appointmentDate} ${selectedTime}`;

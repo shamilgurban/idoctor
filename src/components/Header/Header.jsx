@@ -62,7 +62,7 @@ const Header = () => {
         <div className="card-body p-0">
           <div className="list-group m-0">
             <Link to="/profile" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
-              <i className="far fa-user mr-3"></i>Profil
+              <i className="far fa-user mr-3"></i>Müraciətlər
             </Link>
             <Link to="/settings" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
               <i className="fas fa-key mr-3"></i>Tənzimləmələr

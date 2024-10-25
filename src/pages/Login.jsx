@@ -86,16 +86,11 @@ function Login() {
         const doctorResponse = await axiosInstance.get("/Doctors/GetAllDoctors");
         const doctor = doctorResponse.data.find((doc) => doc.email === email);
         localStorage.setItem('doctorId', doctor.id)
-
-        if (doctor && !doctor.isVerified) {
-          toast.error("Hesab təsdiqlənməyi gözləyir.");
-          return false;
-        }
       }
       return true; 
     } catch (error) {
       console.error("Error fetching user/doctor data:", error.response ? error.response.data : error.message);
-      toast.error("Xəta baş verdi. Yenidən cəhd edin.");
+      toast.error("Xəta baş verdi. Əgər hesabınız varsa, təsdiq barədə email alacaqsınız.");
       return false;
     }
   };

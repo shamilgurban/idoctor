@@ -61,12 +61,12 @@ const Header = () => {
       <div className="card border-0 p-0" style={{ width: '18rem' }}>
         <div className="card-body p-0">
           <div className="list-group m-0">
-            <Link to="/DoctorDash" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
+            <a to="/DoctorDash" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
               <i className="far fa-user mr-3"></i>Müraciətlər
-            </Link>
-            <Link to="/settings" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
+            </a>
+            <a to="/settings" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
               <i className="fas fa-key mr-3"></i>Tənzimləmələr
-            </Link>
+            </a>
           </div>
           <div className="dropdown-divider m-0"></div>
           {/* Use href to navigate on logout */}

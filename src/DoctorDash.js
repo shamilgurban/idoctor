@@ -18,7 +18,7 @@ function App() {
 
     const getPendingAppointments = () => {
         const doctorId = localStorage.getItem('doctorId')
-        axios.get(`http://localhost:8080/api/Appointments/GetDoctorsPendingAppointmentsById/${doctorId}`)
+        axios.get(`http://localhost:8080/api/Appointments/GetDoctorsPendingAppointmentsByDoctorId/${doctorId}`)
             .then(res => {
                 console.log(res); // Backend-dən gələn məlumatı yoxlayın
                 setAppointments(res.data);

@@ -61,10 +61,10 @@ const Header = () => {
       <div className="card border-0 p-0" style={{ width: '18rem' }}>
         <div className="card-body p-0">
           <div className="list-group m-0">
-            <a to="/DoctorDash" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
+            <a href="DoctorDash" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
               <i className="far fa-user mr-3"></i>Müraciətlər
             </a>
-            <a to="/settings" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
+            <a href="settings" className="list-group-item border-0 list-group-item-action" onClick={closeSubmenu}>
               <i className="fas fa-key mr-3"></i>Tənzimləmələr
             </a>
           </div>

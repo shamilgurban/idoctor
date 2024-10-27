@@ -1,18 +1,18 @@
 import React from 'react';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Header from '../Header/Header'
+import './Layout.css'; // Create or modify this CSS file
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="layout-container">
       <Header />
-      <main>
+      <main className="content-container">
         {children}
       </main>
       <Footer />
     </div>
   );
-}
-
+};
 
 export default Layout;

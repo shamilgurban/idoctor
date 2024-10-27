@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import axiosInstance from '../../axiosConfig';
-import './Header.css'; 
+import './Header.css';
 
 const Header = () => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const submenuRef = useRef(null);
 
@@ -30,22 +30,30 @@ const Header = () => {
     localStorage.setItem('patientId', ''); // Set patientId to empty
     localStorage.setItem('doctorId', ''); // Set patientId to empty
     setUser(null);
-    // Use href for logout instead of navigate
   };
 
   const toggleSubmenu = () => {
     setSubmenuOpen(prev => !prev);
   };
 
-  const closeSubmenu = () => setSubmenuOpen(false);
+  // Add the missing `closeSubmenu` function
+  const closeSubmenu = () => {
+    setSubmenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev);
+  };
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   const handleClickOutside = (event) => {
     if (
-      submenuRef.current && 
-      !submenuRef.current.contains(event.target) && 
+      submenuRef.current &&
+      !submenuRef.current.contains(event.target) &&
       !event.target.closest('.submenu')
     ) {
-      closeSubmenu();
+      setSubmenuOpen(false);
     }
   };
 
@@ -69,11 +77,13 @@ const Header = () => {
             </a>
           </div>
           <div className="dropdown-divider m-0"></div>
-          {/* Use href to navigate on logout */}
-          <a 
-            href="/" 
-            className="list-group-item border-0 list-group-item-action text-danger" 
-            onClick={() => { handleLogout(); closeSubmenu(); }}
+          <a
+            href="/"
+            className="list-group-item border-0 list-group-item-action text-danger"
+            onClick={() => {
+              handleLogout();
+              closeSubmenu();
+            }}
           >
             <i className="fas fa-power-off mr-3"></i>Çıxış
           </a>
@@ -124,14 +134,30 @@ const Header = () => {
                 </a>
               </figure>
             </div>
+
+            {/* Hamburger Icon for Mobile Menu */}
+            <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </div>
+
             <div className="menu-area">
               <nav className="main-menu navbar-expand-md navbar-light">
                 <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul className="navigation clearfix">
-                    <li className={window.location.pathname === "/" ? "current": ""}><a href="/">Ana Səhifə</a></li>
-                    <li className={window.location.pathname === "/Doctors" ? "current": ""}><a href="/Doctors">Həkimlər</a></li>
-                    <li className={window.location.pathname === "/About" ? "current": ""}><a href="/About">Haqqımızda</a></li>
-                    <li className={window.location.pathname === "/Contact" ? "current": ""}><a href="/Contact">Əlaqə</a></li>
+                    <li className={window.location.pathname === "/" ? "current" : ""}>
+                      <a href="/">Ana Səhifə</a>
+                    </li>
+                    <li className={window.location.pathname === "/Doctors" ? "current" : ""}>
+                      <a href="/Doctors">Həkimlər</a>
+                    </li>
+                    <li className={window.location.pathname === "/About" ? "current" : ""}>
+                      <a href="/About">Haqqımızda</a>
+                    </li>
+                    <li className={window.location.pathname === "/Contact" ? "current" : ""}>
+                      <a href="/Contact">Əlaqə</a>
+                    </li>
                   </ul>
                 </div>
               </nav>
@@ -140,7 +166,7 @@ const Header = () => {
             <div className="btn-box submenu-container">
               {user ? (
                 <>
-                  <div className='submenu' onClick={toggleSubmenu}>
+                  <div className="submenu" onClick={toggleSubmenu}>
                     <span>{user.name} {user.surname}</span>
                     <i className={`fas fa-chevron-down ${submenuOpen ? 'rotated' : ''}`} />
                   </div>
@@ -149,12 +175,23 @@ const Header = () => {
               ) : (
                 <a href="/Register" className="theme-btn-one text-nowrap">
                   Qeydiyyatdan Keç
-                   <i className="icon-Arrow-Right mx-2" />
+                  <i className="icon-Arrow-Right mx-2" />
                 </a>
               )}
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Side Menu */}
+      <div className={`mobile-side-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <button className="close-button" onClick={closeMobileMenu}>&times;</button>
+        <ul className="navigation">
+          <li><a href="/" onClick={closeMobileMenu}>Ana Səhifə</a></li>
+          <li><a href="/Doctors" onClick={closeMobileMenu}>Həkimlər</a></li>
+          <li><a href="/About" onClick={closeMobileMenu}>Haqqımızda</a></li>
+          <li><a href="/Contact" onClick={closeMobileMenu}>Əlaqə</a></li>
+        </ul>
       </div>
     </div>
   );

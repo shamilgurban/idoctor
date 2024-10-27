@@ -1,0 +1,14 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the layout takes the full height of the viewport */
+  }
+  
+  .content-container {
+    flex: 1; /* Takes up all the available space between header and footer */
+  }
+  
+  footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
+  

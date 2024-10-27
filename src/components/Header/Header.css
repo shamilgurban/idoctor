@@ -1,9 +1,13 @@
+/* Dropdown Menu Styles */
 .dropdown-menu {
     display: none;
     position: absolute;
     z-index: 1000;
     overflow: hidden;
     width: 180px;
+    background-color: white;  /* Ensure the dropdown has a background */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Add some shadow for better visibility */
+    border-radius: 5px;
 }
 
 .dropdown-menu.open {
@@ -27,6 +31,8 @@
     padding: 5px 10px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    background-color: #f9f9f9;  /* Slightly lighter background for better UI */
+    color: #333;  /* Ensure text color is readable */
 }
 
 .submenu-container {
@@ -35,4 +41,153 @@
 
 .rotated {
     transform: rotate(180deg);
+}
+
+/* Hamburger Icon for Mobile Menu */
+.mobile-menu-icon {
+    display: none; /* Hidden by default, shown for mobile only */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.mobile-menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Media Query to Show Hamburger Icon for Mobile */
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    .menu-area {
+        display: none; /* Hide the normal menu on mobile */
+    }
+}
+
+/* Mobile Side Menu */
+.mobile-side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.mobile-side-menu.open {
+    right: 0;
+}
+
+.mobile-side-menu .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-side-menu .navigation {
+    list-style: none;
+    padding: 60px 20px;
+}
+
+.mobile-side-menu .navigation li {
+    margin: 15px 0;
+}
+
+.mobile-side-menu .navigation li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* General Styles for Header Elements */
+.main-header {
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+    background-color: #333;
+    color: #fff;
+}
+
+.header-top .info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-top .info li {
+    margin-right: 15px;
+    color: #fff;
+}
+
+.header-top .info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-lower {
+    padding: 20px 0;
+}
+
+.outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Adjusting the Dropdown and Submenu for Better Usability */
+.profil-dropdown {
+    top: 100%;
+    left: 0;
+    border: 1px solid #ddd;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.profil-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.profil-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.profil-dropdown .text-danger {
+    color: #dc3545;
+}
+
+/* Media Queries for Responsive Header Adjustments */
+@media (max-width: 768px) {
+    .header-lower {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-box {
+        margin-top: 15px;
+    }
+
+    .submenu-container {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }

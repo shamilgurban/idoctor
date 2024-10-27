@@ -121,39 +121,7 @@ function Doctors() {
         </div>
       </section>
 
-      <section className="agent-section">
-        <div className="auto-container">
-          <div className="inner-container bg-color-2">
-            <div className="row clearfix">
-              <div className="col-lg-6 col-md-12 col-sm-12 left-column">
-                <div className="content_block_3">
-                  <div className="content-box">
-                    <h3>Bizimlə Əlaqə</h3>
-                    <div className="support-box">
-                      <div className="icon-box"><i className="fas fa-phone"></i></div>
-                      <span>Tel</span>
-                      <h3><a href="tel:+994102251508">+(994) 10 225 15 08</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12 col-sm-12 right-column">
-                <div className="content_block_4">
-                  <div className="content-box">
-                    <h3>Abunə ol</h3>
-                    <form action="index.html" method="post" className="subscribe-form">
-                      <div className="form-group">
-                        <input type="email" name="email" placeholder="Mail adresiniz" required="" />
-                        <button type="submit" className="theme-btn-one">Abunə Ol<i className="icon-Arrow-Right"></i></button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <button 
         className="scroll-top scroll-to-target" 

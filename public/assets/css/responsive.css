@@ -712,7 +712,7 @@
   }
 
   .footer-top{
-    padding: 220px 0px 40px 0px;
+    padding: 22px 0px 40px 0px;
   }
 
   .banner-section.style-two{
@@ -1108,7 +1108,7 @@
 @media only screen and (max-width: 499px){
 
   .agent-section .inner-container{
-    padding: 50px 30px;
+    padding: 50px 20px;
   }
 
   .content_block_3 .content-box,

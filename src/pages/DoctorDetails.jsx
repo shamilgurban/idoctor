@@ -158,14 +158,14 @@ function DoctorDetails() {
                                                     ))}
                                                 </ul>
                                             </div>
-                                            <div className="text">
+                                            {/*<div className="text">
                                                 <p>Lorem ipsum dolor sit amet consectur adipisc eiusmod tempor incididunt.</p>
-                                            </div>
+                                            </div>*/}
                                             <div className="lower-box clearfix">
                                                 <ul className="info clearfix">
                                                     <li><i className="fas fa-map-marker-alt" />Bakı, Azərbaycan</li>
-                                                    <li><i className="fas fa-phone" /><a href={`tel:${doctor.phone}`}>{doctor.phone || '+994 55 555 55 55'}</a></li>
-                                                    <li><i className="fas fa-tag" /> 40 AZN</li>
+                                                    <li><i className="fas fa-phone" /><a href={`tel:${doctor.phone}`}>{doctor.phone}</a></li>
+                                                    <li><i className="fas fa-tag" /> 20 AZN</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -177,9 +177,9 @@ function DoctorDetails() {
                                             <div className="inner-box">
                                                 <div className="text">
                                                     <h3>Haqqında</h3>
-                                                    <p>Dr. {doctor.name} {doctor.surname} Nyu-Yorkda, Nyu-Yorkda üz-çənə cərrahıdır. Dr. {doctor.name} öz sahəsindəki digər mütəxəssislərlə müqayisədə anadangəlmə ürək pozğunluqları və ürəyə qulluq sahəsində daha çox təcrübəyə malikdir. O, Mount Sinai Morningside və Ruzvelt Xəstəxanası kimi tibb müəssisələri ilə bağlıdır. O, yeni xəstələri qəbul edir. Görüş sifariş etmək üçün Dr. Pinney ilə əvvəlcədən zəng etməyinizə əmin olun. </p>
+                                                    <p>Dr. {doctor.name} {doctor.surname} haqqında məlumat yoxdur</p>
                                                     <h3>İxtisaslar</h3>
-                                                    <ul className="treatments-list clearfix">
+                                                    {/*<ul className="treatments-list clearfix">
                                                         <li><a href="#">Kardiologiya</a></li>
                                                         <li><a href="#">Kardio Cərrahiyyə</a></li>
                                                         <li><a href="#">İnvaziv Kardiologiya</a></li>
@@ -188,7 +188,7 @@ function DoctorDetails() {
                                                     <ul className="list clearfix">
                                                         <li>Azərbaycan Tibb Universiteti <span>- Müalicə işi</span></li>
                                                         <li>Tədris Tibbi Cərrahiyyə <span>- Kardiologiya</span></li>
-                                                    </ul>
+                                                    </ul> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +250,7 @@ function DoctorDetails() {
                                             <input type="file" name="file" onChange={handleFileChange} required />
                                         </div>
                                            <div className="form-group app-form">
-                                            <p>Qiymət: 40 AZN</p>
+                                            <p>Qiymət: 20 AZN</p>
                                         </div>
                                         <button type="submit" className="theme-btn">Təqdim et</button>
                                     </form>

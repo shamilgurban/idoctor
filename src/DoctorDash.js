@@ -151,21 +151,12 @@ function App() {
             <section class="doctors-dashboard bg-color-3">
                 <div class="left-panel">
                     <div class="profile-box">
-                        <div className="upper-box">
-                            <figure className="profile-image"><img src="assets/images/resource/profile-2.png" alt="" /></figure>
-                            <div className="title-box centred">
-                                <div className="inner">
-                                    <h3>Dr. Nurlan İbrahimov</h3>
-                                    <p>Kardioloq</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div className="profile-info">
                             <ul className="list clearfix">
                                 <li><a href="doctors-dashboard.html" className="current"><i className="fas fa-columns" />Profil</a></li>
                                 <li><a href="my-profile.html"><i className="fas fa-user" />Profil Tənzimləmələri</a></li>
                                 <li><a href="change-password.html"><i className="fas fa-unlock-alt" />Parolu Dəyiş</a></li>
-                                <li><a href="login.html"><i className="fas fa-sign-out-alt" />Hesabdan çıxış</a></li>
                             </ul>
                         </div>
                     </div>

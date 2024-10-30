@@ -135,13 +135,7 @@ function App() {
           <div className="left-panel">
               <div className="profile-box">
                 <div className="upper-box">
-                  <figure className="profile-image"><img src="assets/images/resource/profile-2.png" alt="" /></figure>
-                  <div className="title-box centred">
-                    <div className="inner">
-                      <h3>Dr. Nurlan İbrahimov</h3>
-                      <p>Kardioloq</p>
-                    </div>
-                  </div>
+                
                 </div>
                 <div className="profile-info">
                   <ul className="list clearfix">

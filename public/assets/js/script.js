@@ -4,9 +4,11 @@
 	
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
+		setTimeout(() => {
+			if($('.preloader').length){
+				$('.preloader').fadeIn(200).fadeOut(500);
+			}
+		}, 50)
 	}
 	
 	//Update Header Style and Scroll to Top

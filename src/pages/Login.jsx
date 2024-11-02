@@ -61,7 +61,7 @@ function Login() {
 
   const fetchPatientId = async (email) => {
     try {
-      const response = await axiosInstance.get("http://localhost:8080/api/Patients/GetAllPatients");
+      const response = await axiosInstance.get("http://94.20.82.6:8080/api/Patients/GetAllPatients");
       const patients = response.data;
       const patient = patients.find((patient) => patient.email === email);
 

@@ -97,7 +97,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://94.20.82.6:8080/api/Auth/RegisterPatient', {
+      const response = await axios.post('http://idoktor.org:8080/api/Auth/RegisterPatient', {
         name: formData.name,
         surname: formData.surname, 
         email: formData.email,

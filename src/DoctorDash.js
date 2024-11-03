@@ -18,7 +18,7 @@ function App() {
 
     const getPendingAppointments = () => {
         const doctorId = localStorage.getItem('doctorId')
-        axios.get(`http://94.20.82.6:8080/api/Appointments/GetDoctorsPendingAppointmentsByDoctorId/${doctorId}`)
+        axios.get(`http://idoktor.org:8080/api/Appointments/GetDoctorsPendingAppointmentsByDoctorId/${doctorId}`)
             .then(res => {
                 console.log(res); // Backend-dən gələn məlumatı yoxlayın
                 setAppointments(res.data);
@@ -53,7 +53,7 @@ function App() {
 
         try {
             console.log("Sending accept request for appointment ID:", id);
-            await axios.put(`http://94.20.82.6:8080/api/Appointments/AcceptAppointment/${id}`, { doctorReview: response });
+            await axios.put(`http://idoktor.org:8080/api/Appointments/AcceptAppointment/${id}`, { doctorReview: response });
             setIsAccepted(true);
             alert('Cavab göndərildi və qəbul edildi!');
             setIsPopupOpen(false);
@@ -69,7 +69,7 @@ function App() {
     const declineAppointment = async (id) => {
         try {
             console.log("Sending decline request for appointment ID:", id);
-            await axios.put(`http://94.20.82.6:8080/api/Appointments/declineAppointment/${id}`);
+            await axios.put(`http://idoktor.org:8080/api/Appointments/declineAppointment/${id}`);
             // Handle appointment decline
             alert('İmtina edildi!');
             getPendingAppointments();
@@ -218,7 +218,7 @@ function App() {
                                                     <tr className="name-box" key={appointment.id}>
                                                         <td>{appointment.patientFullName}</td>
                                                         <td>{new Date(appointment.appointmentDate).toLocaleDateString()}</td>
-                                                        <td><a target='_blank' href={`http://94.20.82.6:8080/${appointment.analysisDocumentPath}`}>{appointment.analysisName}</a></td>
+                                                        <td><a target='_blank' href={`http://idoktor.org:8080/${appointment.analysisDocumentPath}`}>{appointment.analysisName}</a></td>
 
 
                                                         <td>

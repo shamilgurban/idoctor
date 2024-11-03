@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const axiosInstance = axios.create({
-  baseURL: 'http://94.20.82.6:8080/api', 
+  baseURL: 'http://idoktor.org:8080/api', 
 });
 
 // Add a request interceptor

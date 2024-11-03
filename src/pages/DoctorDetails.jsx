@@ -25,7 +25,7 @@ function DoctorDetails() {
     useEffect(() => {
         const fetchDoctorDetails = async () => {
             try {
-                const response = await axios.get(`http://94.20.82.6:8080/api/Doctors/GetDoctorById/${id}`);
+                const response = await axios.get(`http://idoktor.org:8080/api/Doctors/GetDoctorById/${id}`);
                 const doctorData = response.data;
 
                 if (!doctorData) {
@@ -44,7 +44,7 @@ function DoctorDetails() {
 
         const fetchAnalyses = async () => {
             try {
-                const response = await axios.get("http://94.20.82.6:8080/api/Analyses/GetAllAnalyses");
+                const response = await axios.get("http://idoktor.org:8080/api/Analyses/GetAllAnalyses");
                 setAnalyses(response.data); 
             } catch (error) {
                 console.error("Error fetching analyses!", error);
@@ -88,7 +88,7 @@ function DoctorDetails() {
     appointmentData.append("AnalysisDocument", file); 
 
     try {
-        const response = await axios.post("http://94.20.82.6:8080/api/Appointments/CreateAppointment", appointmentData, {
+        const response = await axios.post("http://idoktor.org:8080/api/Appointments/CreateAppointment", appointmentData, {
             headers: {
                 'Content-Type': 'multipart/form-data', 
             },

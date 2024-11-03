@@ -13,7 +13,7 @@ const Header = () => {
       const email = localStorage.getItem('email');
       if (email) {
         try {
-          const response = await axiosInstance.get('http://94.20.82.6:8080/api/Auth/GetAllUsers');
+          const response = await axiosInstance.get('http://idoktor.org:8080/api/Auth/GetAllUsers');
           const foundUser = response.data.find(u => u.email === email);
           setUser(foundUser);
         } catch (error) {

@@ -8,7 +8,7 @@
 			if($('.preloader').length){
 				$('.preloader').fadeIn(200).fadeOut(500);
 			}
-		}, 50)
+		}, 100)
 	}
 	
 	//Update Header Style and Scroll to Top

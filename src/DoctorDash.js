@@ -53,7 +53,7 @@ function App() {
 
         try {
             console.log("Sending accept request for appointment ID:", id);
-            await axios.put(`http://idoktor.94.20.82.6:8080/api/Appointments/AcceptAppointment/${id}`, { doctorReview: response });
+            await axios.put(`http://94.20.82.6:8080/api/Appointments/AcceptAppointment/${id}`, { doctorReview: response });
             setIsAccepted(true);
             alert('Cavab göndərildi və qəbul edildi!');
             setIsPopupOpen(false);

@@ -13,7 +13,7 @@ function Doctors() {
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
-    axios.get('http://idoktor.org:8080/api/Doctors/GetVerifiedDoctors')
+    axios.get('http://94.20.82.6:8080/api/Doctors/GetVerifiedDoctors')
       .then(response => {
         const doctorsList = response.data.map(doctor => ({
           id: doctor.id,

@@ -62,7 +62,7 @@ function RegisterForDoc() {
     postData.append('VerificationDocument', formData.verificationDocument);
 
     try {
-      const response = await axios.post('http://idoktor.org:8080/api/Auth/RegisterDoctor', postData, {
+      const response = await axios.post('http://94.20.82.6:8080/api/Auth/RegisterDoctor', postData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
